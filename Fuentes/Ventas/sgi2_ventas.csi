@@ -1,0 +1,16 @@
+[History]
+1=#P0#=mb	#P1#=Imprimir	#P2#=sgi2_ventas/FrmVentas2/Imprimir	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140301114715	#P7#=0	#P8#=162	.
+2=#P0#=mb	#P1#=Grabar	#P2#=sgi2_ventas/FrmManGuias/Grabar	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140228112533	#P7#=0	#P8#=35	.
+3=#P0#=mb	#P1#=Fg1_EnterCell	#P2#=sgi2_ventas/FrmManGuias/Fg1_EnterCell	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140228112356	#P7#=0	#P8#=9	.
+4=#P0#=mb	#P1#=Imprimir	#P2#=sgi2_ventas/FrmManGuias/Imprimir	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140228112022	#P7#=0	#P8#=19	.
+5=#P0#=mb	#P1#=iniciarCampos	#P2#=sgi2_ventas/FrmManGuias/iniciarCampos	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140228105600	#P7#=0	#P8#=4	.
+6=#P0#=mb	#P1#=MuestraSegundoTab	#P2#=sgi2_ventas/FrmManGuias/MuestraSegundoTab	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140228105418	#P7#=0	#P8#=106	.
+7=#P0#=mb	#P1#=Grabar	#P2#=sgi2_ventas/FrmVentas2/Grabar	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140228102830	#P7#=0	#P8#=335	.
+8=#P0#=mb	#P1#=MuestraSegundoTab	#P2#=sgi2_ventas/FrmVentas2/MuestraSegundoTab	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140228102409	#P7#=0	#P8#=230	.
+9=#P0#=mb	#P1#=optconguia_Click	#P2#=sgi2_ventas/FrmVentas2/optconguia_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140228100909	#P7#=0	#P8#=16	.
+10=#P0#=mb	#P1#=Check1_Click	#P2#=sgi2_ventas/FrmVentas2/Check1_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140228100735	#P7#=0	#P8#=18	.
+11=#P0#=mb	#P1#=optsinguia_Click	#P2#=sgi2_ventas/FrmVentas2/optsinguia_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140228100703	#P7#=0	#P8#=8	.
+12=#P0#=mb	#P1#=optconcotizacion_Click	#P2#=sgi2_ventas/FrmVentas2/optconcotizacion_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140228100646	#P7#=0	#P8#=14	.
+13=#P0#=mb	#P1#=pGridConfigurar	#P2#=sgi2_ventas/FrmVentas2/pGridConfigurar	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140228095805	#P7#=0	#P8#=2	.
+14=#P0#=mb	#P1#=pCargarGrid	#P2#=sgi2_ventas/FrmVentas2/pCargarGrid	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140228095654	#P7#=0	#P8#=78	.
+15=#P0#=mb	#P1#=Form_Load	#P2#=sgi2_ventas/FrmVentas2/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140228095626	#P7#=0	#P8#=1	.

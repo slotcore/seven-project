@@ -1,0 +1,6 @@
+VBGROUP 5.0
+StartupProject=..\..\SevenVBP.vbp
+Project=..\planillas\sgi2_planillas.vbp
+Project=..\Compras\sgi2_compras.vbp
+Project=..\Produccion\sgi2_produccion.vbp
+Project=..\..\..\librerias 25\eps_librerias\eps_librerias.vbp

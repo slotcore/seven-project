@@ -1,0 +1,151 @@
+Alojamiento WEB
+---------------
+Francisco Cortez
+Peruwebsites
+E-mail: info@peruwebsites.net
+Website: www.peruwebsites.net
+Tlf: 472-5741
+
+
+savar local ferroles
+--------------------
+614-7300
+7336 - sabroso
+7337 - chatin carlos
+
+**************************
+cuentas de cooreo agrovado
+http://www.agro-vado.com/cpanel
+ 
+UserName: agrovad
+PassWord: industriasperu
+
+Digitar el siguiente link:
+http://www.agro-vado.com/webmail
+ 
+usuario: (sunombre@agro-vado.com)
+password: (contraseña)
+(minusculas)
+ 
+ftp://www.agro-vado.com
+UserName: agrovad
+PassWord: industriasperu
+
+
+
+'********************************
+paginas de contabilidad de costos
+
+http://www.aulafacil.com/Contabcoste/Crscontcost.htm
+http://www.redcontable.com/dc/tips_excel/tipex002/
+http://www.ingenieria.unam.mx/~materiacfc/CCostos.html
+
+
+
+***********************************
+clave de acceso para el servidor
+
+usuario	: root
+password: hcancho
+
+crear un usuario
+================
+useradd epollongo
+
+cambiar el password de un usuario
+=================================
+smbpasswd -a epollongo
+
+
+usuarios de la red y contraseña
+===============================
+
+Usuario         Contraseña
+============================
+ochumbimuni     2468
+epollongo	tiburonzin
+mmondragon2	0879
+acustodio       marialuisa
+cvasquez        123456
+zaguilar        210191
+
+
+
+**********
+NO BAJAR
+
+\.mp3$
+\.mpg$
+\.mpeg$
+\.avi$
+\.bat$
+\.pif$
+\.scr$
+\.sys$
+\.wma$
+\.wmv$
+\.mov$
+\.rm$
+\.rpm$
+\.vob$
+\.ace$
+\.lnk$
+\.ram$
+\.msi$
+\.3gp$
+\.dll$
+
+
+*******
+NEGAR
+
+www.porno.com
+www.lolitas.com
+hi5
+adult
+pinga
+zorras
+lolitas
+putas
+putos
+putitas
+hentai
+fucking
+-i
+youtube
+gateway.dll
+messenge
+jovencitas
+chat
+hardcore
+www.videojuegos.com
+adulteras
+metroflog
+caletanomas
+buenamusica
+video
+flodeo.com
+miqueas
+r@ygold
+phtc
+ptch
+babes_in_blue
+prostitutas
+sonico
+facebook
+iloveim
+twitter
+megaupload
+megaclick
+megavideo
+megaerotic
+ares
+emule
+programafull
+Kazza
+kaaza
+estrenosdtl
+www.barriop2p
+piratadivx
+torrenteslocos
+newtpd

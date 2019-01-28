@@ -1,0 +1,4 @@
+VBGROUP 5.0
+Project=sgi2_contabilidad.vbp
+StartupProject=..\..\directo.vbp
+Project=..\funciones\SGI2_funciones.vbp

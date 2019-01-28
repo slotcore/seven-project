@@ -1,0 +1,4 @@
+VBGROUP 5.0
+Project=sgi2_planillas.vbp
+StartupProject=..\..\Contabilidad.vbp
+Project=..\Contabilidad2\sgi2_contabilidad2.vbp

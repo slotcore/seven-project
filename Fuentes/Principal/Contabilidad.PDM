@@ -1,0 +1,560 @@
+[Root]
+Most Recent Package=seven
+
+[Package|Paquete de instalación estándar 1|Seven Soft]
+Icon1=Seven.exe
+Title1=Seven Soft
+StartIn1=$(AppPath)
+Key1=Icon1
+
+
+[Package|Paquete de instalación estándar 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\Proyectos\contabilidad\Paquete (2)
+
+[Package|Paquete de instalación estándar 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Paquete de instalación estándar 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Paquete de instalación estándar 1|Files Found]
+
+[Package|Paquete de instalación estándar 1|Files Released]
+
+[Package|Paquete de instalación estándar 1|Missing Dependency Information]
+D:\Proyectos\librerias25\aspa_textboxfecha\AspaTextBoxFecha.ocx=
+D:\Proyectos\contabilidad\librerias\planillas3\sgi2_planillas3.dll=
+D:\Proyectos\contabilidad\librerias\funciones\SGI2_funciones.dll=
+D:\Proyectos\contabilidad\librerias\PuntoVenta\SGI2_puntoventa.dll=
+D:\Proyectos\contabilidad\librerias\mantenimiento\sgi2_mantenimiento.dll=
+D:\Proyectos\contabilidad\librerias\planillas2\sgi2_planillas2.dll=
+D:\Proyectos\contabilidad\librerias\planillas\sgi2_planillas.dll=
+D:\Proyectos\contabilidad\librerias\CajaBancos\sgi2_cajabancos.dll=
+D:\Proyectos\contabilidad\librerias\Contabilidad2\sgi2_contabilidad2.dll=
+D:\Proyectos\contabilidad\librerias\Gestion\sgi2_gestion.dll=
+D:\Proyectos\contabilidad\librerias\Contabilidad\sgi2_contabilidad.dll=
+D:\Proyectos\contabilidad\librerias\Produccion\sgi2_produccion.dll=
+D:\Proyectos\contabilidad\librerias\Ventas\sgi2_ventas.dll=
+D:\Proyectos\contabilidad\librerias\Compras\sgi2_compras.dll=
+D:\Proyectos\contabilidad\librerias\almacen\SGI2_almacen.dll=
+D:\Proyectos\contabilidad\librerias\Procesos\Sgi2_Procesos.dll=
+D:\Proyectos\librerias25\eps_librerias\eps_librerias.dll=
+C:\WINDOWS\system32\scrobj.dll=
+C:\WINDOWS\system32\msscript.ocx=
+C:\WINDOWS\system32\MSDBRPT.DLL=
+C:\WINDOWS\system32\VSPRINT7.ocx=
+C:\WINDOWS\system32\VSVPort7.ocx=
+C:\WINDOWS\system32\VSRpt7.ocx=
+C:\WINDOWS\system32\vsStr7.ocx=
+C:\WINDOWS\system32\Vsflex7.ocx=
+C:\Archivos de programa\Archivos comunes\System\ado\msado25.tlb=
+C:\WINDOWS\system32\SizerOne.ocx=
+D:\Proyectos\librerias25\Eps_MantTablas\Eps_MantTablas.dll=
+
+[Package|Paquete de instalación estándar 1|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\scrrun.dll=
+
+[Package|Paquete de instalación estándar 1|Files Added]
+D:\Proyectos\contabilidad\sigpyme.mdw=
+D:\Proyectos\librerias25\librerias\seven.ini=
+D:\Proyectos\librerias25\librerias\Unzip32.dll=
+D:\Proyectos\librerias25\librerias\zip32.dll=
+
+[Package|Paquete de instalación estándar 1|Files Removed]
+c:\archivos de programa\microsoft visual studio\vb98\wizards\pdwizard\redist\mdac_typ.exe=
+
+[Package|Paquete de instalación estándar 1|Files In Project]
+D:\Proyectos\contabilidad\Seven.exe=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\VB6ES.DLL=Yes
+C:\WINDOWS\system32\hhctrl.ocx=Yes
+C:\WINDOWS\system32\itss.dll=Yes
+C:\WINDOWS\system32\itircl.dll=Yes
+C:\WINDOWS\hh.exe=Yes
+D:\Proyectos\librerias25\Eps_MantTablas\Eps_MantTablas.dll=Yes
+C:\WINDOWS\system32\SizerOne.ocx=Yes
+C:\Archivos de programa\Archivos comunes\System\ado\msado25.tlb=Yes
+C:\WINDOWS\system32\Vsflex7.ocx=Yes
+C:\WINDOWS\system32\vsStr7.ocx=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+C:\WINDOWS\system32\msvcrt.dll=Yes
+C:\WINDOWS\system32\scrrnes.dll=Yes
+C:\WINDOWS\system32\VSRpt7.ocx=Yes
+C:\WINDOWS\system32\VSVPort7.ocx=Yes
+C:\WINDOWS\system32\VSPRINT7.ocx=Yes
+C:\WINDOWS\system32\MSDBRPT.DLL=Yes
+C:\WINDOWS\system32\msscript.ocx=Yes
+C:\WINDOWS\system32\scrobj.dll=Yes
+D:\Proyectos\librerias25\eps_librerias\eps_librerias.dll=Yes
+C:\Archivos de programa\Archivos comunes\Designer\MSDERUN.DLL=Yes
+D:\Proyectos\contabilidad\librerias\Procesos\Sgi2_Procesos.dll=Yes
+D:\Proyectos\contabilidad\librerias\almacen\SGI2_almacen.dll=Yes
+D:\Proyectos\contabilidad\librerias\Compras\sgi2_compras.dll=Yes
+D:\Proyectos\contabilidad\librerias\Ventas\sgi2_ventas.dll=Yes
+D:\Proyectos\contabilidad\librerias\Produccion\sgi2_produccion.dll=Yes
+D:\Proyectos\contabilidad\librerias\Contabilidad\sgi2_contabilidad.dll=Yes
+D:\Proyectos\contabilidad\librerias\Gestion\sgi2_gestion.dll=Yes
+D:\Proyectos\contabilidad\librerias\Contabilidad2\sgi2_contabilidad2.dll=Yes
+D:\Proyectos\contabilidad\librerias\CajaBancos\sgi2_cajabancos.dll=Yes
+D:\Proyectos\contabilidad\librerias\planillas\sgi2_planillas.dll=Yes
+D:\Proyectos\contabilidad\librerias\planillas2\sgi2_planillas2.dll=Yes
+D:\Proyectos\contabilidad\librerias\mantenimiento\sgi2_mantenimiento.dll=Yes
+D:\Proyectos\contabilidad\librerias\PuntoVenta\SGI2_puntoventa.dll=Yes
+D:\Proyectos\contabilidad\librerias\funciones\SGI2_funciones.dll=Yes
+D:\Proyectos\contabilidad\librerias\planillas3\sgi2_planillas3.dll=Yes
+D:\Proyectos\librerias25\aspa_textboxfecha\AspaTextBoxFecha.ocx=Yes
+C:\WINDOWS\system32\todg7.ocx=Yes
+C:\WINDOWS\system32\todgub7.dll=Yes
+C:\WINDOWS\system32\tdbgpp7.dll=Yes
+C:\WINDOWS\system32\MSFLXGRD.OCX=Yes
+C:\WINDOWS\system32\FLXGDES.DLL=Yes
+C:\WINDOWS\system32\COMCT232.OCX=Yes
+C:\WINDOWS\system32\CMCT2ES.DLL=Yes
+C:\WINDOWS\system32\COMCT332.OCX=Yes
+C:\WINDOWS\system32\CMCT3ES.DLL=Yes
+C:\WINDOWS\system32\COMCTL32.OCX=Yes
+C:\WINDOWS\system32\CMCTLES.DLL=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+C:\WINDOWS\system32\MSCMCES.DLL=Yes
+C:\WINDOWS\system32\MSDATGRD.OCX=Yes
+C:\WINDOWS\system32\MSSTDFMT.DLL=Yes
+C:\WINDOWS\system32\STDFTES.DLL=Yes
+C:\WINDOWS\system32\DATGDES.DLL=Yes
+C:\WINDOWS\system32\MSCOMCT2.OCX=Yes
+C:\WINDOWS\system32\MSCC2ES.DLL=Yes
+C:\WINDOWS\system32\RICHTX32.OCX=Yes
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+C:\WINDOWS\system32\RCHTXES.DLL=Yes
+C:\WINDOWS\system32\MSMASK32.OCX=Yes
+C:\WINDOWS\system32\MSMSKES.DLL=Yes
+C:\WINDOWS\system32\MSDATLST.OCX=Yes
+C:\WINDOWS\system32\DATLSES.DLL=Yes
+C:\WINDOWS\system32\COMDLG32.OCX=Yes
+C:\WINDOWS\system32\CMDLGES.DLL=Yes
+C:\WINDOWS\system32\MSWINSCK.OCX=Yes
+C:\WINDOWS\system32\WINSKES.DLL=Yes
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\Proyectos\contabilidad\sigpyme.mdw=Yes
+D:\Proyectos\librerias25\librerias\seven.ini=Yes
+D:\Proyectos\librerias25\librerias\Unzip32.dll=Yes
+D:\Proyectos\librerias25\librerias\zip32.dll=Yes
+
+[Package|Paquete de instalación estándar 1|Configure Registry Files]
+Applicable=No
+
+[Package|Paquete de instalación estándar 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Paquete de instalación estándar 1|Install Locations]
+D:\Proyectos\contabilidad\Seven.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\VB6ES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\hhctrl.ocx=$(WinSysPath)
+C:\WINDOWS\system32\itss.dll=$(WinSysPath)
+C:\WINDOWS\system32\itircl.dll=$(WinSysPath)
+C:\WINDOWS\hh.exe=$(WinSysPath)
+D:\Proyectos\librerias25\Eps_MantTablas\Eps_MantTablas.dll=$(AppPath)
+C:\WINDOWS\system32\SizerOne.ocx=$(WinSysPath)
+C:\Archivos de programa\Archivos comunes\System\ado\msado25.tlb=$(WinSysPath)
+C:\WINDOWS\system32\Vsflex7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\vsStr7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\scrrnes.dll=$(WinSysPath)
+C:\WINDOWS\system32\VSRpt7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\VSVPort7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\VSPRINT7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\MSDBRPT.DLL=$(WinSysPath)
+C:\WINDOWS\system32\msscript.ocx=$(WinSysPath)
+C:\WINDOWS\system32\scrobj.dll=$(WinSysPath)
+D:\Proyectos\librerias25\eps_librerias\eps_librerias.dll=$(AppPath)
+C:\Archivos de programa\Archivos comunes\Designer\MSDERUN.DLL=$(CommonFiles)\designer
+D:\Proyectos\contabilidad\librerias\Procesos\Sgi2_Procesos.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\almacen\SGI2_almacen.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\Compras\sgi2_compras.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\Ventas\sgi2_ventas.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\Produccion\sgi2_produccion.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\Contabilidad\sgi2_contabilidad.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\Gestion\sgi2_gestion.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\Contabilidad2\sgi2_contabilidad2.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\CajaBancos\sgi2_cajabancos.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\planillas\sgi2_planillas.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\planillas2\sgi2_planillas2.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\mantenimiento\sgi2_mantenimiento.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\PuntoVenta\SGI2_puntoventa.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\funciones\SGI2_funciones.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\planillas3\sgi2_planillas3.dll=$(AppPath)
+D:\Proyectos\librerias25\aspa_textboxfecha\AspaTextBoxFecha.ocx=$(AppPath)
+C:\WINDOWS\system32\todg7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\todgub7.dll=$(WinSysPath)
+C:\WINDOWS\system32\tdbgpp7.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\FLXGDES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\COMCT232.OCX=$(WinSysPath)
+C:\WINDOWS\system32\CMCT2ES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\COMCT332.OCX=$(WinSysPath)
+C:\WINDOWS\system32\CMCT3ES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\COMCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\CMCTLES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSCMCES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSDATGRD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINDOWS\system32\STDFTES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\DATGDES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCT2.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSCC2ES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\RICHTX32.OCX=$(WinSysPath)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\RCHTXES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSMASK32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSMSKES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSDATLST.OCX=$(WinSysPath)
+C:\WINDOWS\system32\DATLSES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\CMDLGES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSWINSCK.OCX=$(WinSysPath)
+C:\WINDOWS\system32\WINSKES.DLL=$(WinSysPath)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\Proyectos\contabilidad\sigpyme.mdw=$(AppPath)
+D:\Proyectos\librerias25\librerias\seven.ini=$(AppPath)
+D:\Proyectos\librerias25\librerias\Unzip32.dll=$(WinSysPath)
+D:\Proyectos\librerias25\librerias\zip32.dll=$(WinSysPath)
+
+[Package|Paquete de instalación estándar 1|Configure Shared Files]
+Applicable=Yes
+D:\Proyectos\contabilidad\Seven.exe=Yes
+D:\Proyectos\librerias25\Eps_MantTablas\Eps_MantTablas.dll=Yes
+D:\Proyectos\librerias25\eps_librerias\eps_librerias.dll=Yes
+D:\Proyectos\contabilidad\librerias\Procesos\Sgi2_Procesos.dll=Yes
+D:\Proyectos\contabilidad\librerias\almacen\SGI2_almacen.dll=Yes
+D:\Proyectos\contabilidad\librerias\Compras\sgi2_compras.dll=Yes
+D:\Proyectos\contabilidad\librerias\Ventas\sgi2_ventas.dll=Yes
+D:\Proyectos\contabilidad\librerias\Produccion\sgi2_produccion.dll=Yes
+D:\Proyectos\contabilidad\librerias\Contabilidad\sgi2_contabilidad.dll=Yes
+D:\Proyectos\contabilidad\librerias\Gestion\sgi2_gestion.dll=Yes
+D:\Proyectos\contabilidad\librerias\Contabilidad2\sgi2_contabilidad2.dll=Yes
+D:\Proyectos\contabilidad\librerias\CajaBancos\sgi2_cajabancos.dll=Yes
+D:\Proyectos\contabilidad\librerias\planillas\sgi2_planillas.dll=Yes
+D:\Proyectos\contabilidad\librerias\planillas2\sgi2_planillas2.dll=Yes
+D:\Proyectos\contabilidad\librerias\mantenimiento\sgi2_mantenimiento.dll=Yes
+D:\Proyectos\contabilidad\librerias\PuntoVenta\SGI2_puntoventa.dll=Yes
+D:\Proyectos\contabilidad\librerias\funciones\SGI2_funciones.dll=Yes
+D:\Proyectos\contabilidad\librerias\planillas3\sgi2_planillas3.dll=Yes
+D:\Proyectos\librerias25\aspa_textboxfecha\AspaTextBoxFecha.ocx=Yes
+D:\Proyectos\contabilidad\sigpyme.mdw=Yes
+D:\Proyectos\librerias25\librerias\seven.ini=Yes
+
+[Package|Paquete de instalación estándar 1|Distribution]
+Type=multi
+Size=1.44 MB
+Title=Seven
+
+[Package|Paquete de instalación estándar 1|IconGroups]
+Group0=Seven
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Paquete de instalación estándar 1|Seven]
+Icon1=Seven.exe
+Title1=Seven
+StartIn1=$(AppPath)
+Key1=Icon1
+
+
+[Package|seven|Seven Soft]
+Icon1=Seven.exe
+Title1=Seven Soft
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|seven|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\Proyectos\contabilidad\Paquete (2)
+
+[Package|seven|Configure DAO ISAMs]
+Applicable=No
+
+[Package|seven|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|seven|Files Found]
+
+[Package|seven|Files Released]
+
+[Package|seven|Missing Dependency Information]
+D:\Proyectos\librerias25\aspa_textboxfecha\AspaTextBoxFecha.ocx=
+D:\Proyectos\contabilidad\librerias\planillas3\sgi2_planillas3.dll=
+D:\Proyectos\contabilidad\librerias\funciones\SGI2_funciones.dll=
+D:\Proyectos\contabilidad\librerias\PuntoVenta\SGI2_puntoventa.dll=
+D:\Proyectos\contabilidad\librerias\mantenimiento\sgi2_mantenimiento.dll=
+D:\Proyectos\contabilidad\librerias\planillas2\sgi2_planillas2.dll=
+D:\Proyectos\contabilidad\librerias\planillas\sgi2_planillas.dll=
+D:\Proyectos\contabilidad\librerias\CajaBancos\sgi2_cajabancos.dll=
+D:\Proyectos\contabilidad\librerias\Contabilidad2\sgi2_contabilidad2.dll=
+D:\Proyectos\contabilidad\librerias\Gestion\sgi2_gestion.dll=
+D:\Proyectos\contabilidad\librerias\Contabilidad\sgi2_contabilidad.dll=
+D:\Proyectos\contabilidad\librerias\Produccion\sgi2_produccion.dll=
+D:\Proyectos\contabilidad\librerias\Ventas\sgi2_ventas.dll=
+D:\Proyectos\contabilidad\librerias\Compras\sgi2_compras.dll=
+D:\Proyectos\contabilidad\librerias\almacen\SGI2_almacen.dll=
+D:\Proyectos\contabilidad\librerias\Procesos\Sgi2_Procesos.dll=
+D:\Proyectos\librerias25\eps_librerias\eps_librerias.dll=
+C:\WINDOWS\system32\scrobj.dll=
+C:\WINDOWS\system32\msscript.ocx=
+C:\WINDOWS\system32\MSDBRPT.DLL=
+C:\WINDOWS\system32\VSPRINT7.ocx=
+C:\WINDOWS\system32\VSVPort7.ocx=
+C:\WINDOWS\system32\VSRpt7.ocx=
+C:\WINDOWS\system32\vsStr7.ocx=
+C:\WINDOWS\system32\Vsflex7.ocx=
+C:\Archivos de programa\Archivos comunes\System\ado\msado25.tlb=
+C:\WINDOWS\system32\SizerOne.ocx=
+D:\Proyectos\librerias25\Eps_MantTablas\Eps_MantTablas.dll=
+
+[Package|seven|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\scrrun.dll=
+
+[Package|seven|Files Added]
+D:\Proyectos\contabilidad\sigpyme.mdw=
+D:\Proyectos\librerias25\librerias\seven.ini=
+D:\Proyectos\librerias25\librerias\Unzip32.dll=
+D:\Proyectos\librerias25\librerias\zip32.dll=
+
+[Package|seven|Files Removed]
+c:\archivos de programa\microsoft visual studio\vb98\wizards\pdwizard\redist\mdac_typ.exe=
+
+[Package|seven|Files In Project]
+D:\Proyectos\contabilidad\Seven.exe=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\VB6ES.DLL=Yes
+C:\WINDOWS\system32\hhctrl.ocx=Yes
+C:\WINDOWS\system32\itss.dll=Yes
+C:\WINDOWS\system32\itircl.dll=Yes
+C:\WINDOWS\hh.exe=Yes
+D:\Proyectos\librerias25\Eps_MantTablas\Eps_MantTablas.dll=Yes
+C:\WINDOWS\system32\SizerOne.ocx=Yes
+C:\Archivos de programa\Archivos comunes\System\ado\msado25.tlb=Yes
+C:\WINDOWS\system32\Vsflex7.ocx=Yes
+C:\WINDOWS\system32\vsStr7.ocx=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+C:\WINDOWS\system32\msvcrt.dll=Yes
+C:\WINDOWS\system32\scrrnes.dll=Yes
+C:\WINDOWS\system32\VSRpt7.ocx=Yes
+C:\WINDOWS\system32\VSVPort7.ocx=Yes
+C:\WINDOWS\system32\VSPRINT7.ocx=Yes
+C:\WINDOWS\system32\MSDBRPT.DLL=Yes
+C:\WINDOWS\system32\msscript.ocx=Yes
+C:\WINDOWS\system32\scrobj.dll=Yes
+D:\Proyectos\librerias25\eps_librerias\eps_librerias.dll=Yes
+C:\Archivos de programa\Archivos comunes\Designer\MSDERUN.DLL=Yes
+D:\Proyectos\contabilidad\librerias\Procesos\Sgi2_Procesos.dll=Yes
+D:\Proyectos\contabilidad\librerias\almacen\SGI2_almacen.dll=Yes
+D:\Proyectos\contabilidad\librerias\Compras\sgi2_compras.dll=Yes
+D:\Proyectos\contabilidad\librerias\Ventas\sgi2_ventas.dll=Yes
+D:\Proyectos\contabilidad\librerias\Produccion\sgi2_produccion.dll=Yes
+D:\Proyectos\contabilidad\librerias\Contabilidad\sgi2_contabilidad.dll=Yes
+D:\Proyectos\contabilidad\librerias\Gestion\sgi2_gestion.dll=Yes
+D:\Proyectos\contabilidad\librerias\Contabilidad2\sgi2_contabilidad2.dll=Yes
+D:\Proyectos\contabilidad\librerias\CajaBancos\sgi2_cajabancos.dll=Yes
+D:\Proyectos\contabilidad\librerias\planillas\sgi2_planillas.dll=Yes
+D:\Proyectos\contabilidad\librerias\planillas2\sgi2_planillas2.dll=Yes
+D:\Proyectos\contabilidad\librerias\mantenimiento\sgi2_mantenimiento.dll=Yes
+D:\Proyectos\contabilidad\librerias\PuntoVenta\SGI2_puntoventa.dll=Yes
+D:\Proyectos\contabilidad\librerias\funciones\SGI2_funciones.dll=Yes
+D:\Proyectos\contabilidad\librerias\planillas3\sgi2_planillas3.dll=Yes
+D:\Proyectos\librerias25\aspa_textboxfecha\AspaTextBoxFecha.ocx=Yes
+C:\WINDOWS\system32\todg7.ocx=Yes
+C:\WINDOWS\system32\todgub7.dll=Yes
+C:\WINDOWS\system32\tdbgpp7.dll=Yes
+C:\WINDOWS\system32\MSFLXGRD.OCX=Yes
+C:\WINDOWS\system32\FLXGDES.DLL=Yes
+C:\WINDOWS\system32\COMCT232.OCX=Yes
+C:\WINDOWS\system32\CMCT2ES.DLL=Yes
+C:\WINDOWS\system32\COMCT332.OCX=Yes
+C:\WINDOWS\system32\CMCT3ES.DLL=Yes
+C:\WINDOWS\system32\COMCTL32.OCX=Yes
+C:\WINDOWS\system32\CMCTLES.DLL=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+C:\WINDOWS\system32\MSCMCES.DLL=Yes
+C:\WINDOWS\system32\MSDATGRD.OCX=Yes
+C:\WINDOWS\system32\MSSTDFMT.DLL=Yes
+C:\WINDOWS\system32\STDFTES.DLL=Yes
+C:\WINDOWS\system32\DATGDES.DLL=Yes
+C:\WINDOWS\system32\MSCOMCT2.OCX=Yes
+C:\WINDOWS\system32\MSCC2ES.DLL=Yes
+C:\WINDOWS\system32\RICHTX32.OCX=Yes
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+C:\WINDOWS\system32\RCHTXES.DLL=Yes
+C:\WINDOWS\system32\MSMASK32.OCX=Yes
+C:\WINDOWS\system32\MSMSKES.DLL=Yes
+C:\WINDOWS\system32\MSDATLST.OCX=Yes
+C:\WINDOWS\system32\DATLSES.DLL=Yes
+C:\WINDOWS\system32\COMDLG32.OCX=Yes
+C:\WINDOWS\system32\CMDLGES.DLL=Yes
+C:\WINDOWS\system32\MSWINSCK.OCX=Yes
+C:\WINDOWS\system32\WINSKES.DLL=Yes
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\Proyectos\contabilidad\sigpyme.mdw=Yes
+D:\Proyectos\librerias25\librerias\seven.ini=Yes
+D:\Proyectos\librerias25\librerias\Unzip32.dll=Yes
+D:\Proyectos\librerias25\librerias\zip32.dll=Yes
+
+[Package|seven|Configure Registry Files]
+Applicable=No
+
+[Package|seven|Configure Remote Servers]
+Applicable=No
+
+[Package|seven|Install Locations]
+D:\Proyectos\contabilidad\Seven.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\VB6ES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\hhctrl.ocx=$(WinSysPath)
+C:\WINDOWS\system32\itss.dll=$(WinSysPath)
+C:\WINDOWS\system32\itircl.dll=$(WinSysPath)
+C:\WINDOWS\hh.exe=$(WinSysPath)
+D:\Proyectos\librerias25\Eps_MantTablas\Eps_MantTablas.dll=$(AppPath)
+C:\WINDOWS\system32\SizerOne.ocx=$(WinSysPath)
+C:\Archivos de programa\Archivos comunes\System\ado\msado25.tlb=$(WinSysPath)
+C:\WINDOWS\system32\Vsflex7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\vsStr7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\scrrnes.dll=$(WinSysPath)
+C:\WINDOWS\system32\VSRpt7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\VSVPort7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\VSPRINT7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\MSDBRPT.DLL=$(WinSysPath)
+C:\WINDOWS\system32\msscript.ocx=$(WinSysPath)
+C:\WINDOWS\system32\scrobj.dll=$(WinSysPath)
+D:\Proyectos\librerias25\eps_librerias\eps_librerias.dll=$(AppPath)
+C:\Archivos de programa\Archivos comunes\Designer\MSDERUN.DLL=$(CommonFiles)\designer
+D:\Proyectos\contabilidad\librerias\Procesos\Sgi2_Procesos.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\almacen\SGI2_almacen.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\Compras\sgi2_compras.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\Ventas\sgi2_ventas.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\Produccion\sgi2_produccion.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\Contabilidad\sgi2_contabilidad.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\Gestion\sgi2_gestion.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\Contabilidad2\sgi2_contabilidad2.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\CajaBancos\sgi2_cajabancos.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\planillas\sgi2_planillas.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\planillas2\sgi2_planillas2.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\mantenimiento\sgi2_mantenimiento.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\PuntoVenta\SGI2_puntoventa.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\funciones\SGI2_funciones.dll=$(AppPath)
+D:\Proyectos\contabilidad\librerias\planillas3\sgi2_planillas3.dll=$(AppPath)
+D:\Proyectos\librerias25\aspa_textboxfecha\AspaTextBoxFecha.ocx=$(AppPath)
+C:\WINDOWS\system32\todg7.ocx=$(WinSysPath)
+C:\WINDOWS\system32\todgub7.dll=$(WinSysPath)
+C:\WINDOWS\system32\tdbgpp7.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\FLXGDES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\COMCT232.OCX=$(WinSysPath)
+C:\WINDOWS\system32\CMCT2ES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\COMCT332.OCX=$(WinSysPath)
+C:\WINDOWS\system32\CMCT3ES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\COMCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\CMCTLES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSCMCES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSDATGRD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINDOWS\system32\STDFTES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\DATGDES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCT2.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSCC2ES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\RICHTX32.OCX=$(WinSysPath)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\RCHTXES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSMASK32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSMSKES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSDATLST.OCX=$(WinSysPath)
+C:\WINDOWS\system32\DATLSES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\CMDLGES.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSWINSCK.OCX=$(WinSysPath)
+C:\WINDOWS\system32\WINSKES.DLL=$(WinSysPath)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Archivos de programa\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\Proyectos\contabilidad\sigpyme.mdw=$(AppPath)
+D:\Proyectos\librerias25\librerias\seven.ini=$(AppPath)
+D:\Proyectos\librerias25\librerias\Unzip32.dll=$(WinSysPath)
+D:\Proyectos\librerias25\librerias\zip32.dll=$(WinSysPath)
+
+[Package|seven|Configure Shared Files]
+Applicable=Yes
+D:\Proyectos\contabilidad\Seven.exe=No
+D:\Proyectos\librerias25\Eps_MantTablas\Eps_MantTablas.dll=No
+D:\Proyectos\librerias25\eps_librerias\eps_librerias.dll=No
+D:\Proyectos\contabilidad\librerias\Procesos\Sgi2_Procesos.dll=No
+D:\Proyectos\contabilidad\librerias\almacen\SGI2_almacen.dll=No
+D:\Proyectos\contabilidad\librerias\Compras\sgi2_compras.dll=No
+D:\Proyectos\contabilidad\librerias\Ventas\sgi2_ventas.dll=No
+D:\Proyectos\contabilidad\librerias\Produccion\sgi2_produccion.dll=No
+D:\Proyectos\contabilidad\librerias\Contabilidad\sgi2_contabilidad.dll=No
+D:\Proyectos\contabilidad\librerias\Gestion\sgi2_gestion.dll=No
+D:\Proyectos\contabilidad\librerias\Contabilidad2\sgi2_contabilidad2.dll=No
+D:\Proyectos\contabilidad\librerias\CajaBancos\sgi2_cajabancos.dll=No
+D:\Proyectos\contabilidad\librerias\planillas\sgi2_planillas.dll=No
+D:\Proyectos\contabilidad\librerias\planillas2\sgi2_planillas2.dll=No
+D:\Proyectos\contabilidad\librerias\mantenimiento\sgi2_mantenimiento.dll=No
+D:\Proyectos\contabilidad\librerias\PuntoVenta\SGI2_puntoventa.dll=No
+D:\Proyectos\contabilidad\librerias\funciones\SGI2_funciones.dll=No
+D:\Proyectos\contabilidad\librerias\planillas3\sgi2_planillas3.dll=No
+D:\Proyectos\librerias25\aspa_textboxfecha\AspaTextBoxFecha.ocx=No
+D:\Proyectos\contabilidad\sigpyme.mdw=No
+D:\Proyectos\librerias25\librerias\seven.ini=No
+
+[Package|seven|Distribution]
+Type=multi
+Size=1.44 MB
+Title=Seven
+
+[Package|seven|IconGroups]
+Group0=Seven
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|seven|Seven]
+Icon1=Seven.exe
+Title1=Seven
+StartIn1=$(AppPath)
+Key1=Icon1

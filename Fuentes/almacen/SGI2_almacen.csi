@@ -1,0 +1,10 @@
+[History]
+1=#P0#=mb	#P1#=iniciarCampos	#P2#=SGI2_almacen/FrmIngresoAlmacen3/iniciarCampos	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140301213319	#P7#=0	#P8#=20	.
+2=#P0#=mb	#P1#=cmd_Click	#P2#=SGI2_almacen/FrmIngresoAlmacen3/cmd_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140301212616	#P7#=0	#P8#=81	.
+3=#P0#=mb	#P1#=ActivaTool	#P2#=SGI2_almacen/FrmManItems/ActivaTool	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140227213808	#P7#=0	#P8#=2	.
+4=#P0#=mb	#P1#=MuestraSegundoTab	#P2#=SGI2_almacen/FrmManItems/MuestraSegundoTab	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140227213138	#P7#=0	#P8#=3	.
+5=#P0#=mb	#P1#=Blanquea	#P2#=SGI2_almacen/FrmManItems/Blanquea	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140227212419	#P7#=0	#P8#=4	.
+6=#P0#=mb	#P1#=CmdAddCenCos_Click	#P2#=SGI2_almacen/FrmManItems/CmdAddCenCos_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140227210452	#P7#=0	#P8#=3	.
+7=#P0#=mb	#P1#=Bloquea	#P2#=SGI2_almacen/FrmManItems/Bloquea	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140227180008	#P7#=0	#P8#=1	.
+[Workbench]
+1=#P0#=mb	#P1#=CmdAddCenCos_Click	#P2#=SGI2_almacen/FrmManItems/CmdAddCenCos_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=	#P7#=0	#P8#=0	.

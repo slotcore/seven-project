@@ -1,0 +1,4 @@
+VBGROUP 5.0
+Project=sgi2_planillas3.vbp
+StartupProject=..\..\SevenVBP.vbp
+Project=..\funciones\SGI2_funciones.vbp

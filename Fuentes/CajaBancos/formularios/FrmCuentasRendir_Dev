@@ -1,0 +1,2362 @@
+VERSION 5.00
+Object = "{9E883861-2808-4487-913D-EA332634AC0D}#1.0#0"; "SIZERONE.OCX"
+Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCTL.OCX"
+Object = "{D1333493-26F3-11D5-B046-E1A96EACB52A}#1.0#0"; "ASPATEXTBOXFECHA.OCX"
+Object = "{DEF7CADD-83C0-11D0-A0F1-00A024703500}#7.0#0"; "TODG7.OCX"
+Begin VB.Form FrmCuentasRendir_Dev 
+   Caption         =   "Devoluciones de Cuentas por Rendir"
+   ClientHeight    =   7965
+   ClientLeft      =   60
+   ClientTop       =   345
+   ClientWidth     =   11775
+   LinkTopic       =   "Form1"
+   LockControls    =   -1  'True
+   MaxButton       =   0   'False
+   ScaleHeight     =   7965
+   ScaleWidth      =   11775
+   StartUpPosition =   2  'CenterScreen
+   Begin SizerOneLibCtl.TabOne TabOne1 
+      Height          =   7560
+      Left            =   60
+      TabIndex        =   1
+      Top             =   345
+      Width           =   11715
+      _cx             =   20664
+      _cy             =   13335
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Courier New"
+         Size            =   9
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Enabled         =   -1  'True
+      Appearance      =   2
+      MousePointer    =   0
+      _ConvInfo       =   1
+      Version         =   700
+      BackColor       =   -2147483633
+      ForeColor       =   -2147483630
+      FrontTabColor   =   -2147483633
+      BackTabColor    =   -2147483633
+      TabOutlineColor =   -2147483632
+      FrontTabForeColor=   8388608
+      Caption         =   "  &Consulta  |   &Detalle  "
+      Align           =   0
+      CurrTab         =   1
+      FirstTab        =   0
+      Style           =   0
+      Position        =   0
+      AutoSwitch      =   -1  'True
+      AutoScroll      =   -1  'True
+      TabPreview      =   -1  'True
+      ShowFocusRect   =   -1  'True
+      TabsPerPage     =   0
+      BorderWidth     =   0
+      BoldCurrent     =   0   'False
+      DogEars         =   -1  'True
+      MultiRow        =   0   'False
+      MultiRowOffset  =   200
+      CaptionStyle    =   0
+      TabHeight       =   0
+      TabCaptionPos   =   4
+      TabPicturePos   =   0
+      CaptionEmpty    =   ""
+      Separators      =   0   'False
+      Begin VB.Frame Frame1 
+         BorderStyle     =   0  'None
+         Caption         =   "Frame1"
+         Height          =   7140
+         Left            =   -12270
+         TabIndex        =   4
+         Top             =   375
+         Width           =   11625
+         Begin TrueOleDBGrid70.TDBGrid Dg3 
+            Height          =   6720
+            Left            =   60
+            TabIndex        =   8
+            Top             =   285
+            Width           =   11535
+            _ExtentX        =   20346
+            _ExtentY        =   11853
+            _LayoutType     =   4
+            _RowHeight      =   -2147483647
+            _WasPersistedAsPixels=   0
+            Columns(0)._VlistStyle=   0
+            Columns(0)._MaxComboItems=   5
+            Columns(0).Caption=   "Id"
+            Columns(0).DataField=   "dev_id"
+            Columns(0)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(1)._VlistStyle=   0
+            Columns(1)._MaxComboItems=   5
+            Columns(1).Caption=   "Fch. Emi"
+            Columns(1).DataField=   "dev_emi"
+            Columns(1)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(2)._VlistStyle=   0
+            Columns(2)._MaxComboItems=   5
+            Columns(2).Caption=   "Devuelto"
+            Columns(2).DataField=   "dev_imp"
+            Columns(2)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(3)._VlistStyle=   0
+            Columns(3)._MaxComboItems=   5
+            Columns(3).Caption=   "Declarado"
+            Columns(3).DataField=   "Declarado"
+            Columns(3)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(4)._VlistStyle=   0
+            Columns(4)._MaxComboItems=   5
+            Columns(4).Caption=   "x Rendir"
+            Columns(4).DataField=   "xrendir"
+            Columns(4)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(5)._VlistStyle=   0
+            Columns(5)._MaxComboItems=   5
+            Columns(5).Caption=   "id"
+            Columns(5).DataField=   "id"
+            Columns(5)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(6)._VlistStyle=   0
+            Columns(6)._MaxComboItems=   5
+            Columns(6).Caption=   "Fch. Emi."
+            Columns(6).DataField=   "fchemi"
+            Columns(6)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(7)._VlistStyle=   0
+            Columns(7)._MaxComboItems=   5
+            Columns(7).Caption=   "Fch. Pag."
+            Columns(7).DataField=   "fchpag"
+            Columns(7)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(8)._VlistStyle=   0
+            Columns(8)._MaxComboItems=   5
+            Columns(8).Caption=   "Fch. Ren."
+            Columns(8).DataField=   "fchren"
+            Columns(8)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(9)._VlistStyle=   0
+            Columns(9)._MaxComboItems=   5
+            Columns(9).Caption=   "M"
+            Columns(9).DataField=   "simbolo"
+            Columns(9)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(10)._VlistStyle=   0
+            Columns(10)._MaxComboItems=   5
+            Columns(10).Caption=   "Importe"
+            Columns(10).DataField=   "imp"
+            Columns(10)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(11)._VlistStyle=   0
+            Columns(11)._MaxComboItems=   5
+            Columns(11).Caption=   "Tipo Mov."
+            Columns(11).DataField=   "tipmov"
+            Columns(11)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(12)._VlistStyle=   0
+            Columns(12)._MaxComboItems=   5
+            Columns(12).Caption=   "Origen"
+            Columns(12).DataField=   "origen"
+            Columns(12)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(13)._VlistStyle=   0
+            Columns(13)._MaxComboItems=   5
+            Columns(13).Caption=   "Num. Doc"
+            Columns(13).DataField=   "numdoc"
+            Columns(13)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(14)._VlistStyle=   0
+            Columns(14)._MaxComboItems=   5
+            Columns(14).Caption=   "Destino"
+            Columns(14).DataField=   "destino"
+            Columns(14)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(15)._VlistStyle=   0
+            Columns(15)._MaxComboItems=   5
+            Columns(15).Caption=   "T. Persona"
+            Columns(15).DataField=   "tipper"
+            Columns(15)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns(16)._VlistStyle=   0
+            Columns(16)._MaxComboItems=   5
+            Columns(16).Caption=   "Nombre"
+            Columns(16).DataField=   "benef"
+            Columns(16)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+            Columns.Count   =   17
+            Splits(0)._UserFlags=   0
+            Splits(0).Locked=   -1  'True
+            Splits(0).MarqueeStyle=   3
+            Splits(0).SizeMode=   1
+            Splits(0).Size  =   14.74
+            Splits(0).Size.vt=   4
+            Splits(0).RecordSelectorWidth=   503
+            Splits(0)._SavedRecordSelectors=   0   'False
+            Splits(0).Caption=   "Devolución"
+            Splits(0).DividerColor=   12632256
+            Splits(0).SpringMode=   0   'False
+            Splits(0)._PropDict=   "_ColumnProps,515,0;_UserFlags,518,3"
+            Splits(0)._ColumnProps(0)=   "Columns.Count=17"
+            Splits(0)._ColumnProps(1)=   "Column(0).Width=1191"
+            Splits(0)._ColumnProps(2)=   "Column(0).DividerColor=0"
+            Splits(0)._ColumnProps(3)=   "Column(0)._WidthInPix=1111"
+            Splits(0)._ColumnProps(4)=   "Column(0)._EditAlways=0"
+            Splits(0)._ColumnProps(5)=   "Column(0)._ColStyle=512"
+            Splits(0)._ColumnProps(6)=   "Column(0).Order=1"
+            Splits(0)._ColumnProps(7)=   "Column(1).Width=1640"
+            Splits(0)._ColumnProps(8)=   "Column(1).DividerColor=0"
+            Splits(0)._ColumnProps(9)=   "Column(1)._WidthInPix=1561"
+            Splits(0)._ColumnProps(10)=   "Column(1)._EditAlways=0"
+            Splits(0)._ColumnProps(11)=   "Column(1)._ColStyle=513"
+            Splits(0)._ColumnProps(12)=   "Column(1).Order=2"
+            Splits(0)._ColumnProps(13)=   "Column(2).Width=1535"
+            Splits(0)._ColumnProps(14)=   "Column(2).DividerColor=0"
+            Splits(0)._ColumnProps(15)=   "Column(2)._WidthInPix=1455"
+            Splits(0)._ColumnProps(16)=   "Column(2)._EditAlways=0"
+            Splits(0)._ColumnProps(17)=   "Column(2)._ColStyle=514"
+            Splits(0)._ColumnProps(18)=   "Column(2).Order=3"
+            Splits(0)._ColumnProps(19)=   "Column(3).Width=1640"
+            Splits(0)._ColumnProps(20)=   "Column(3).DividerColor=0"
+            Splits(0)._ColumnProps(21)=   "Column(3)._WidthInPix=1561"
+            Splits(0)._ColumnProps(22)=   "Column(3)._EditAlways=0"
+            Splits(0)._ColumnProps(23)=   "Column(3)._ColStyle=514"
+            Splits(0)._ColumnProps(24)=   "Column(3).Order=4"
+            Splits(0)._ColumnProps(25)=   "Column(4).Width=1931"
+            Splits(0)._ColumnProps(26)=   "Column(4).DividerColor=0"
+            Splits(0)._ColumnProps(27)=   "Column(4)._WidthInPix=1852"
+            Splits(0)._ColumnProps(28)=   "Column(4)._EditAlways=0"
+            Splits(0)._ColumnProps(29)=   "Column(4)._ColStyle=514"
+            Splits(0)._ColumnProps(30)=   "Column(4).Order=5"
+            Splits(0)._ColumnProps(31)=   "Column(5).Width=1535"
+            Splits(0)._ColumnProps(32)=   "Column(5).DividerColor=0"
+            Splits(0)._ColumnProps(33)=   "Column(5)._WidthInPix=1455"
+            Splits(0)._ColumnProps(34)=   "Column(5)._EditAlways=0"
+            Splits(0)._ColumnProps(35)=   "Column(5).AllowSizing=0"
+            Splits(0)._ColumnProps(36)=   "Column(5)._ColStyle=516"
+            Splits(0)._ColumnProps(37)=   "Column(5).Visible=0"
+            Splits(0)._ColumnProps(38)=   "Column(5).Order=6"
+            Splits(0)._ColumnProps(39)=   "Column(6).Width=1535"
+            Splits(0)._ColumnProps(40)=   "Column(6).DividerColor=0"
+            Splits(0)._ColumnProps(41)=   "Column(6)._WidthInPix=1455"
+            Splits(0)._ColumnProps(42)=   "Column(6)._EditAlways=0"
+            Splits(0)._ColumnProps(43)=   "Column(6).AllowSizing=0"
+            Splits(0)._ColumnProps(44)=   "Column(6)._ColStyle=513"
+            Splits(0)._ColumnProps(45)=   "Column(6).Visible=0"
+            Splits(0)._ColumnProps(46)=   "Column(6).Order=7"
+            Splits(0)._ColumnProps(47)=   "Column(7).Width=1720"
+            Splits(0)._ColumnProps(48)=   "Column(7).DividerColor=0"
+            Splits(0)._ColumnProps(49)=   "Column(7)._WidthInPix=1640"
+            Splits(0)._ColumnProps(50)=   "Column(7)._EditAlways=0"
+            Splits(0)._ColumnProps(51)=   "Column(7).AllowSizing=0"
+            Splits(0)._ColumnProps(52)=   "Column(7)._ColStyle=513"
+            Splits(0)._ColumnProps(53)=   "Column(7).Visible=0"
+            Splits(0)._ColumnProps(54)=   "Column(7).Order=8"
+            Splits(0)._ColumnProps(55)=   "Column(8).Width=2725"
+            Splits(0)._ColumnProps(56)=   "Column(8).DividerColor=0"
+            Splits(0)._ColumnProps(57)=   "Column(8)._WidthInPix=2646"
+            Splits(0)._ColumnProps(58)=   "Column(8)._EditAlways=0"
+            Splits(0)._ColumnProps(59)=   "Column(8).AllowSizing=0"
+            Splits(0)._ColumnProps(60)=   "Column(8)._ColStyle=516"
+            Splits(0)._ColumnProps(61)=   "Column(8).Visible=0"
+            Splits(0)._ColumnProps(62)=   "Column(8).Order=9"
+            Splits(0)._ColumnProps(63)=   "Column(9).Width=767"
+            Splits(0)._ColumnProps(64)=   "Column(9).DividerColor=0"
+            Splits(0)._ColumnProps(65)=   "Column(9)._WidthInPix=688"
+            Splits(0)._ColumnProps(66)=   "Column(9)._EditAlways=0"
+            Splits(0)._ColumnProps(67)=   "Column(9).AllowSizing=0"
+            Splits(0)._ColumnProps(68)=   "Column(9)._ColStyle=516"
+            Splits(0)._ColumnProps(69)=   "Column(9).Visible=0"
+            Splits(0)._ColumnProps(70)=   "Column(9).Order=10"
+            Splits(0)._ColumnProps(71)=   "Column(10).Width=1535"
+            Splits(0)._ColumnProps(72)=   "Column(10).DividerColor=0"
+            Splits(0)._ColumnProps(73)=   "Column(10)._WidthInPix=1455"
+            Splits(0)._ColumnProps(74)=   "Column(10)._EditAlways=0"
+            Splits(0)._ColumnProps(75)=   "Column(10).AllowSizing=0"
+            Splits(0)._ColumnProps(76)=   "Column(10)._ColStyle=514"
+            Splits(0)._ColumnProps(77)=   "Column(10).Visible=0"
+            Splits(0)._ColumnProps(78)=   "Column(10).Order=11"
+            Splits(0)._ColumnProps(79)=   "Column(11).Width=1482"
+            Splits(0)._ColumnProps(80)=   "Column(11).DividerColor=0"
+            Splits(0)._ColumnProps(81)=   "Column(11)._WidthInPix=1402"
+            Splits(0)._ColumnProps(82)=   "Column(11)._EditAlways=0"
+            Splits(0)._ColumnProps(83)=   "Column(11).AllowSizing=0"
+            Splits(0)._ColumnProps(84)=   "Column(11)._ColStyle=516"
+            Splits(0)._ColumnProps(85)=   "Column(11).Visible=0"
+            Splits(0)._ColumnProps(86)=   "Column(11).Order=12"
+            Splits(0)._ColumnProps(87)=   "Column(12).Width=5900"
+            Splits(0)._ColumnProps(88)=   "Column(12).DividerColor=0"
+            Splits(0)._ColumnProps(89)=   "Column(12)._WidthInPix=5821"
+            Splits(0)._ColumnProps(90)=   "Column(12)._EditAlways=0"
+            Splits(0)._ColumnProps(91)=   "Column(12).AllowSizing=0"
+            Splits(0)._ColumnProps(92)=   "Column(12)._ColStyle=516"
+            Splits(0)._ColumnProps(93)=   "Column(12).Visible=0"
+            Splits(0)._ColumnProps(94)=   "Column(12).Order=13"
+            Splits(0)._ColumnProps(95)=   "Column(13).Width=2725"
+            Splits(0)._ColumnProps(96)=   "Column(13).DividerColor=0"
+            Splits(0)._ColumnProps(97)=   "Column(13)._WidthInPix=2646"
+            Splits(0)._ColumnProps(98)=   "Column(13)._EditAlways=0"
+            Splits(0)._ColumnProps(99)=   "Column(13).AllowSizing=0"
+            Splits(0)._ColumnProps(100)=   "Column(13)._ColStyle=516"
+            Splits(0)._ColumnProps(101)=   "Column(13).Visible=0"
+            Splits(0)._ColumnProps(102)=   "Column(13).Order=14"
+            Splits(0)._ColumnProps(103)=   "Column(14).Width=4075"
+            Splits(0)._ColumnProps(104)=   "Column(14).DividerColor=0"
+            Splits(0)._ColumnProps(105)=   "Column(14)._WidthInPix=3995"
+            Splits(0)._ColumnProps(106)=   "Column(14)._EditAlways=0"
+            Splits(0)._ColumnProps(107)=   "Column(14).AllowSizing=0"
+            Splits(0)._ColumnProps(108)=   "Column(14)._ColStyle=516"
+            Splits(0)._ColumnProps(109)=   "Column(14).Visible=0"
+            Splits(0)._ColumnProps(110)=   "Column(14).Order=15"
+            Splits(0)._ColumnProps(111)=   "Column(15).Width=1561"
+            Splits(0)._ColumnProps(112)=   "Column(15).DividerColor=0"
+            Splits(0)._ColumnProps(113)=   "Column(15)._WidthInPix=1482"
+            Splits(0)._ColumnProps(114)=   "Column(15)._EditAlways=0"
+            Splits(0)._ColumnProps(115)=   "Column(15).AllowSizing=0"
+            Splits(0)._ColumnProps(116)=   "Column(15)._ColStyle=516"
+            Splits(0)._ColumnProps(117)=   "Column(15).Visible=0"
+            Splits(0)._ColumnProps(118)=   "Column(15).Order=16"
+            Splits(0)._ColumnProps(119)=   "Column(16).Width=4948"
+            Splits(0)._ColumnProps(120)=   "Column(16).DividerColor=0"
+            Splits(0)._ColumnProps(121)=   "Column(16)._WidthInPix=4868"
+            Splits(0)._ColumnProps(122)=   "Column(16)._EditAlways=0"
+            Splits(0)._ColumnProps(123)=   "Column(16).AllowSizing=0"
+            Splits(0)._ColumnProps(124)=   "Column(16)._ColStyle=516"
+            Splits(0)._ColumnProps(125)=   "Column(16).Visible=0"
+            Splits(0)._ColumnProps(126)=   "Column(16).Order=17"
+            Splits(1)._UserFlags=   0
+            Splits(1).Locked=   -1  'True
+            Splits(1).MarqueeStyle=   3
+            Splits(1).SizeMode=   1
+            Splits(1).Size  =   12000.19
+            Splits(1).Size.vt=   4
+            Splits(1).RecordSelectors=   0   'False
+            Splits(1).RecordSelectorWidth=   503
+            Splits(1)._SavedRecordSelectors=   0   'False
+            Splits(1).Caption=   "Cuenta x Rendir"
+            Splits(1).DividerColor=   12632256
+            Splits(1).SpringMode=   0   'False
+            Splits(1)._PropDict=   "_ColumnProps,515,0;_UserFlags,518,3"
+            Splits(1)._ColumnProps(0)=   "Columns.Count=17"
+            Splits(1)._ColumnProps(1)=   "Column(0).Width=1191"
+            Splits(1)._ColumnProps(2)=   "Column(0).DividerColor=0"
+            Splits(1)._ColumnProps(3)=   "Column(0)._WidthInPix=1111"
+            Splits(1)._ColumnProps(4)=   "Column(0)._EditAlways=0"
+            Splits(1)._ColumnProps(5)=   "Column(0).AllowSizing=0"
+            Splits(1)._ColumnProps(6)=   "Column(0)._ColStyle=516"
+            Splits(1)._ColumnProps(7)=   "Column(0).Visible=0"
+            Splits(1)._ColumnProps(8)=   "Column(0).Order=1"
+            Splits(1)._ColumnProps(9)=   "Column(1).Width=1746"
+            Splits(1)._ColumnProps(10)=   "Column(1).DividerColor=0"
+            Splits(1)._ColumnProps(11)=   "Column(1)._WidthInPix=1667"
+            Splits(1)._ColumnProps(12)=   "Column(1)._EditAlways=0"
+            Splits(1)._ColumnProps(13)=   "Column(1).AllowSizing=0"
+            Splits(1)._ColumnProps(14)=   "Column(1)._ColStyle=516"
+            Splits(1)._ColumnProps(15)=   "Column(1).Visible=0"
+            Splits(1)._ColumnProps(16)=   "Column(1).Order=2"
+            Splits(1)._ColumnProps(17)=   "Column(2).Width=1535"
+            Splits(1)._ColumnProps(18)=   "Column(2).DividerColor=0"
+            Splits(1)._ColumnProps(19)=   "Column(2)._WidthInPix=1455"
+            Splits(1)._ColumnProps(20)=   "Column(2)._EditAlways=0"
+            Splits(1)._ColumnProps(21)=   "Column(2).AllowSizing=0"
+            Splits(1)._ColumnProps(22)=   "Column(2)._ColStyle=516"
+            Splits(1)._ColumnProps(23)=   "Column(2).Visible=0"
+            Splits(1)._ColumnProps(24)=   "Column(2).Order=3"
+            Splits(1)._ColumnProps(25)=   "Column(3).Width=2725"
+            Splits(1)._ColumnProps(26)=   "Column(3).DividerColor=0"
+            Splits(1)._ColumnProps(27)=   "Column(3)._WidthInPix=2646"
+            Splits(1)._ColumnProps(28)=   "Column(3)._EditAlways=0"
+            Splits(1)._ColumnProps(29)=   "Column(3).AllowSizing=0"
+            Splits(1)._ColumnProps(30)=   "Column(3)._ColStyle=516"
+            Splits(1)._ColumnProps(31)=   "Column(3).Visible=0"
+            Splits(1)._ColumnProps(32)=   "Column(3).Order=4"
+            Splits(1)._ColumnProps(33)=   "Column(4).Width=2725"
+            Splits(1)._ColumnProps(34)=   "Column(4).DividerColor=0"
+            Splits(1)._ColumnProps(35)=   "Column(4)._WidthInPix=2646"
+            Splits(1)._ColumnProps(36)=   "Column(4)._EditAlways=0"
+            Splits(1)._ColumnProps(37)=   "Column(4).AllowSizing=0"
+            Splits(1)._ColumnProps(38)=   "Column(4)._ColStyle=516"
+            Splits(1)._ColumnProps(39)=   "Column(4).Visible=0"
+            Splits(1)._ColumnProps(40)=   "Column(4).Order=5"
+            Splits(1)._ColumnProps(41)=   "Column(5).Width=1535"
+            Splits(1)._ColumnProps(42)=   "Column(5).DividerColor=0"
+            Splits(1)._ColumnProps(43)=   "Column(5)._WidthInPix=1455"
+            Splits(1)._ColumnProps(44)=   "Column(5)._EditAlways=0"
+            Splits(1)._ColumnProps(45)=   "Column(5)._ColStyle=516"
+            Splits(1)._ColumnProps(46)=   "Column(5).Order=6"
+            Splits(1)._ColumnProps(47)=   "Column(6).Width=1535"
+            Splits(1)._ColumnProps(48)=   "Column(6).DividerColor=0"
+            Splits(1)._ColumnProps(49)=   "Column(6)._WidthInPix=1455"
+            Splits(1)._ColumnProps(50)=   "Column(6)._EditAlways=0"
+            Splits(1)._ColumnProps(51)=   "Column(6)._ColStyle=513"
+            Splits(1)._ColumnProps(52)=   "Column(6).Order=7"
+            Splits(1)._ColumnProps(53)=   "Column(7).Width=1720"
+            Splits(1)._ColumnProps(54)=   "Column(7).DividerColor=0"
+            Splits(1)._ColumnProps(55)=   "Column(7)._WidthInPix=1640"
+            Splits(1)._ColumnProps(56)=   "Column(7)._EditAlways=0"
+            Splits(1)._ColumnProps(57)=   "Column(7)._ColStyle=513"
+            Splits(1)._ColumnProps(58)=   "Column(7).Order=8"
+            Splits(1)._ColumnProps(59)=   "Column(8).Width=1826"
+            Splits(1)._ColumnProps(60)=   "Column(8).DividerColor=0"
+            Splits(1)._ColumnProps(61)=   "Column(8)._WidthInPix=1746"
+            Splits(1)._ColumnProps(62)=   "Column(8)._EditAlways=0"
+            Splits(1)._ColumnProps(63)=   "Column(8)._ColStyle=513"
+            Splits(1)._ColumnProps(64)=   "Column(8).Order=9"
+            Splits(1)._ColumnProps(65)=   "Column(9).Width=767"
+            Splits(1)._ColumnProps(66)=   "Column(9).DividerColor=0"
+            Splits(1)._ColumnProps(67)=   "Column(9)._WidthInPix=688"
+            Splits(1)._ColumnProps(68)=   "Column(9)._EditAlways=0"
+            Splits(1)._ColumnProps(69)=   "Column(9)._ColStyle=516"
+            Splits(1)._ColumnProps(70)=   "Column(9).Order=10"
+            Splits(1)._ColumnProps(71)=   "Column(10).Width=1535"
+            Splits(1)._ColumnProps(72)=   "Column(10).DividerColor=0"
+            Splits(1)._ColumnProps(73)=   "Column(10)._WidthInPix=1455"
+            Splits(1)._ColumnProps(74)=   "Column(10)._EditAlways=0"
+            Splits(1)._ColumnProps(75)=   "Column(10)._ColStyle=514"
+            Splits(1)._ColumnProps(76)=   "Column(10).Order=11"
+            Splits(1)._ColumnProps(77)=   "Column(11).Width=1482"
+            Splits(1)._ColumnProps(78)=   "Column(11).DividerColor=0"
+            Splits(1)._ColumnProps(79)=   "Column(11)._WidthInPix=1402"
+            Splits(1)._ColumnProps(80)=   "Column(11)._EditAlways=0"
+            Splits(1)._ColumnProps(81)=   "Column(11)._ColStyle=516"
+            Splits(1)._ColumnProps(82)=   "Column(11).Order=12"
+            Splits(1)._ColumnProps(83)=   "Column(12).Width=5900"
+            Splits(1)._ColumnProps(84)=   "Column(12).DividerColor=0"
+            Splits(1)._ColumnProps(85)=   "Column(12)._WidthInPix=5821"
+            Splits(1)._ColumnProps(86)=   "Column(12)._EditAlways=0"
+            Splits(1)._ColumnProps(87)=   "Column(12)._ColStyle=516"
+            Splits(1)._ColumnProps(88)=   "Column(12).Order=13"
+            Splits(1)._ColumnProps(89)=   "Column(13).Width=2725"
+            Splits(1)._ColumnProps(90)=   "Column(13).DividerColor=0"
+            Splits(1)._ColumnProps(91)=   "Column(13)._WidthInPix=2646"
+            Splits(1)._ColumnProps(92)=   "Column(13)._EditAlways=0"
+            Splits(1)._ColumnProps(93)=   "Column(13)._ColStyle=516"
+            Splits(1)._ColumnProps(94)=   "Column(13).Order=14"
+            Splits(1)._ColumnProps(95)=   "Column(14).Width=4075"
+            Splits(1)._ColumnProps(96)=   "Column(14).DividerColor=0"
+            Splits(1)._ColumnProps(97)=   "Column(14)._WidthInPix=3995"
+            Splits(1)._ColumnProps(98)=   "Column(14)._EditAlways=0"
+            Splits(1)._ColumnProps(99)=   "Column(14)._ColStyle=516"
+            Splits(1)._ColumnProps(100)=   "Column(14).Order=15"
+            Splits(1)._ColumnProps(101)=   "Column(15).Width=1561"
+            Splits(1)._ColumnProps(102)=   "Column(15).DividerColor=0"
+            Splits(1)._ColumnProps(103)=   "Column(15)._WidthInPix=1482"
+            Splits(1)._ColumnProps(104)=   "Column(15)._EditAlways=0"
+            Splits(1)._ColumnProps(105)=   "Column(15)._ColStyle=516"
+            Splits(1)._ColumnProps(106)=   "Column(15).Order=16"
+            Splits(1)._ColumnProps(107)=   "Column(16).Width=4948"
+            Splits(1)._ColumnProps(108)=   "Column(16).DividerColor=0"
+            Splits(1)._ColumnProps(109)=   "Column(16)._WidthInPix=4868"
+            Splits(1)._ColumnProps(110)=   "Column(16)._EditAlways=0"
+            Splits(1)._ColumnProps(111)=   "Column(16)._ColStyle=516"
+            Splits(1)._ColumnProps(112)=   "Column(16).Order=17"
+            Splits.Count    =   2
+            PrintInfos(0)._StateFlags=   3
+            PrintInfos(0).Name=   "piInternal 0"
+            PrintInfos(0).PageHeaderFont=   "Size=8.25,Charset=0,Weight=400,Underline=0,Italic=0,Strikethrough=0,Name=MS Sans Serif"
+            PrintInfos(0).PageFooterFont=   "Size=8.25,Charset=0,Weight=400,Underline=0,Italic=0,Strikethrough=0,Name=MS Sans Serif"
+            PrintInfos(0).PageHeaderHeight=   0
+            PrintInfos(0).PageFooterHeight=   0
+            PrintInfos.Count=   1
+            AllowUpdate     =   0   'False
+            Appearance      =   0
+            DefColWidth     =   0
+            HeadLines       =   1
+            FootLines       =   1
+            MultipleLines   =   0
+            CellTipsWidth   =   0
+            DeadAreaBackColor=   12632256
+            RowDividerColor =   12632256
+            RowSubDividerColor=   12632256
+            DirectionAfterEnter=   1
+            MaxRows         =   250000
+            ViewColumnCaptionWidth=   0
+            ViewColumnWidth =   0
+            _PropDict       =   "_ExtentX,2003,3;_ExtentY,2004,3;_LayoutType,512,2;_RowHeight,16,3;_StyleDefs,513,0;_WasPersistedAsPixels,516,2"
+            _StyleDefs(0)   =   "_StyleRoot:id=0,.parent=-1,.alignment=3,.valignment=0,.bgcolor=&H80000005&"
+            _StyleDefs(1)   =   ":id=0,.fgcolor=&H80000008&,.wraptext=0,.locked=0,.transparentBmp=0"
+            _StyleDefs(2)   =   ":id=0,.fgpicPosition=0,.bgpicMode=0,.appearance=0,.borderSize=0,.ellipsis=0"
+            _StyleDefs(3)   =   ":id=0,.borderColor=&H80000005&,.borderType=0,.bold=0,.fontsize=825,.italic=0"
+            _StyleDefs(4)   =   ":id=0,.underline=0,.strikethrough=0,.charset=0"
+            _StyleDefs(5)   =   ":id=0,.fontname=MS Sans Serif"
+            _StyleDefs(6)   =   "Style:id=1,.parent=0,.namedParent=33,.bgcolor=&HDBFDFD&,.bold=0,.fontsize=825"
+            _StyleDefs(7)   =   ":id=1,.italic=0,.underline=0,.strikethrough=0,.charset=0"
+            _StyleDefs(8)   =   ":id=1,.fontname=MS Sans Serif"
+            _StyleDefs(9)   =   "CaptionStyle:id=4,.parent=2,.namedParent=37"
+            _StyleDefs(10)  =   "HeadingStyle:id=2,.parent=1,.namedParent=34,.alignment=2,.fgcolor=&H800000&"
+            _StyleDefs(11)  =   ":id=2,.bold=0,.fontsize=825,.italic=0,.underline=0,.strikethrough=0,.charset=0"
+            _StyleDefs(12)  =   ":id=2,.fontname=MS Sans Serif"
+            _StyleDefs(13)  =   "FooterStyle:id=3,.parent=1,.namedParent=35,.bold=0,.fontsize=825,.italic=0"
+            _StyleDefs(14)  =   ":id=3,.underline=0,.strikethrough=0,.charset=0"
+            _StyleDefs(15)  =   ":id=3,.fontname=MS Sans Serif"
+            _StyleDefs(16)  =   "InactiveStyle:id=5,.parent=2,.bgcolor=&H8000000F&,.fgcolor=&H80000012&"
+            _StyleDefs(17)  =   "SelectedStyle:id=6,.parent=1,.namedParent=36,.bgcolor=&H80&"
+            _StyleDefs(18)  =   "EditorStyle:id=7,.parent=1"
+            _StyleDefs(19)  =   "HighlightRowStyle:id=8,.parent=1,.namedParent=38"
+            _StyleDefs(20)  =   "EvenRowStyle:id=9,.parent=1,.namedParent=39"
+            _StyleDefs(21)  =   "OddRowStyle:id=10,.parent=1,.namedParent=40"
+            _StyleDefs(22)  =   "RecordSelectorStyle:id=11,.parent=2,.namedParent=41"
+            _StyleDefs(23)  =   "FilterBarStyle:id=12,.parent=1,.namedParent=42"
+            _StyleDefs(24)  =   "Splits(0).Style:id=95,.parent=1,.bgcolor=&HDBFDFD&,.fgcolor=&H800000&"
+            _StyleDefs(25)  =   "Splits(0).CaptionStyle:id=104,.parent=4"
+            _StyleDefs(26)  =   "Splits(0).HeadingStyle:id=96,.parent=2,.fgcolor=&H800000&"
+            _StyleDefs(27)  =   "Splits(0).FooterStyle:id=97,.parent=3"
+            _StyleDefs(28)  =   "Splits(0).InactiveStyle:id=98,.parent=5"
+            _StyleDefs(29)  =   "Splits(0).SelectedStyle:id=100,.parent=6,.namedParent=38,.bgcolor=&H80&"
+            _StyleDefs(30)  =   "Splits(0).EditorStyle:id=99,.parent=7"
+            _StyleDefs(31)  =   "Splits(0).HighlightRowStyle:id=101,.parent=8,.bgcolor=&H80&"
+            _StyleDefs(32)  =   "Splits(0).EvenRowStyle:id=102,.parent=9"
+            _StyleDefs(33)  =   "Splits(0).OddRowStyle:id=103,.parent=10"
+            _StyleDefs(34)  =   "Splits(0).RecordSelectorStyle:id=105,.parent=11"
+            _StyleDefs(35)  =   "Splits(0).FilterBarStyle:id=106,.parent=12"
+            _StyleDefs(36)  =   "Splits(0).Columns(0).Style:id=110,.parent=95,.alignment=0"
+            _StyleDefs(37)  =   "Splits(0).Columns(0).HeadingStyle:id=107,.parent=96"
+            _StyleDefs(38)  =   "Splits(0).Columns(0).FooterStyle:id=108,.parent=97"
+            _StyleDefs(39)  =   "Splits(0).Columns(0).EditorStyle:id=109,.parent=99"
+            _StyleDefs(40)  =   "Splits(0).Columns(1).Style:id=114,.parent=95,.alignment=2"
+            _StyleDefs(41)  =   "Splits(0).Columns(1).HeadingStyle:id=111,.parent=96"
+            _StyleDefs(42)  =   "Splits(0).Columns(1).FooterStyle:id=112,.parent=97"
+            _StyleDefs(43)  =   "Splits(0).Columns(1).EditorStyle:id=113,.parent=99"
+            _StyleDefs(44)  =   "Splits(0).Columns(2).Style:id=118,.parent=95,.alignment=1"
+            _StyleDefs(45)  =   "Splits(0).Columns(2).HeadingStyle:id=115,.parent=96"
+            _StyleDefs(46)  =   "Splits(0).Columns(2).FooterStyle:id=116,.parent=97"
+            _StyleDefs(47)  =   "Splits(0).Columns(2).EditorStyle:id=117,.parent=99"
+            _StyleDefs(48)  =   "Splits(0).Columns(3).Style:id=78,.parent=95,.alignment=1"
+            _StyleDefs(49)  =   "Splits(0).Columns(3).HeadingStyle:id=75,.parent=96"
+            _StyleDefs(50)  =   "Splits(0).Columns(3).FooterStyle:id=76,.parent=97"
+            _StyleDefs(51)  =   "Splits(0).Columns(3).EditorStyle:id=77,.parent=99"
+            _StyleDefs(52)  =   "Splits(0).Columns(4).Style:id=170,.parent=95,.alignment=1"
+            _StyleDefs(53)  =   "Splits(0).Columns(4).HeadingStyle:id=167,.parent=96"
+            _StyleDefs(54)  =   "Splits(0).Columns(4).FooterStyle:id=168,.parent=97"
+            _StyleDefs(55)  =   "Splits(0).Columns(4).EditorStyle:id=169,.parent=99"
+            _StyleDefs(56)  =   "Splits(0).Columns(5).Style:id=126,.parent=95"
+            _StyleDefs(57)  =   "Splits(0).Columns(5).HeadingStyle:id=123,.parent=96"
+            _StyleDefs(58)  =   "Splits(0).Columns(5).FooterStyle:id=124,.parent=97"
+            _StyleDefs(59)  =   "Splits(0).Columns(5).EditorStyle:id=125,.parent=99"
+            _StyleDefs(60)  =   "Splits(0).Columns(6).Style:id=130,.parent=95,.alignment=2"
+            _StyleDefs(61)  =   "Splits(0).Columns(6).HeadingStyle:id=127,.parent=96"
+            _StyleDefs(62)  =   "Splits(0).Columns(6).FooterStyle:id=128,.parent=97"
+            _StyleDefs(63)  =   "Splits(0).Columns(6).EditorStyle:id=129,.parent=99"
+            _StyleDefs(64)  =   "Splits(0).Columns(7).Style:id=134,.parent=95,.alignment=2"
+            _StyleDefs(65)  =   "Splits(0).Columns(7).HeadingStyle:id=131,.parent=96"
+            _StyleDefs(66)  =   "Splits(0).Columns(7).FooterStyle:id=132,.parent=97"
+            _StyleDefs(67)  =   "Splits(0).Columns(7).EditorStyle:id=133,.parent=99"
+            _StyleDefs(68)  =   "Splits(0).Columns(8).Style:id=178,.parent=95"
+            _StyleDefs(69)  =   "Splits(0).Columns(8).HeadingStyle:id=175,.parent=96"
+            _StyleDefs(70)  =   "Splits(0).Columns(8).FooterStyle:id=176,.parent=97"
+            _StyleDefs(71)  =   "Splits(0).Columns(8).EditorStyle:id=177,.parent=99"
+            _StyleDefs(72)  =   "Splits(0).Columns(9).Style:id=138,.parent=95"
+            _StyleDefs(73)  =   "Splits(0).Columns(9).HeadingStyle:id=135,.parent=96"
+            _StyleDefs(74)  =   "Splits(0).Columns(9).FooterStyle:id=136,.parent=97"
+            _StyleDefs(75)  =   "Splits(0).Columns(9).EditorStyle:id=137,.parent=99"
+            _StyleDefs(76)  =   "Splits(0).Columns(10).Style:id=142,.parent=95,.alignment=1"
+            _StyleDefs(77)  =   "Splits(0).Columns(10).HeadingStyle:id=139,.parent=96"
+            _StyleDefs(78)  =   "Splits(0).Columns(10).FooterStyle:id=140,.parent=97"
+            _StyleDefs(79)  =   "Splits(0).Columns(10).EditorStyle:id=141,.parent=99"
+            _StyleDefs(80)  =   "Splits(0).Columns(11).Style:id=146,.parent=95"
+            _StyleDefs(81)  =   "Splits(0).Columns(11).HeadingStyle:id=143,.parent=96"
+            _StyleDefs(82)  =   "Splits(0).Columns(11).FooterStyle:id=144,.parent=97"
+            _StyleDefs(83)  =   "Splits(0).Columns(11).EditorStyle:id=145,.parent=99"
+            _StyleDefs(84)  =   "Splits(0).Columns(12).Style:id=150,.parent=95"
+            _StyleDefs(85)  =   "Splits(0).Columns(12).HeadingStyle:id=147,.parent=96"
+            _StyleDefs(86)  =   "Splits(0).Columns(12).FooterStyle:id=148,.parent=97"
+            _StyleDefs(87)  =   "Splits(0).Columns(12).EditorStyle:id=149,.parent=99"
+            _StyleDefs(88)  =   "Splits(0).Columns(13).Style:id=154,.parent=95"
+            _StyleDefs(89)  =   "Splits(0).Columns(13).HeadingStyle:id=151,.parent=96"
+            _StyleDefs(90)  =   "Splits(0).Columns(13).FooterStyle:id=152,.parent=97"
+            _StyleDefs(91)  =   "Splits(0).Columns(13).EditorStyle:id=153,.parent=99"
+            _StyleDefs(92)  =   "Splits(0).Columns(14).Style:id=158,.parent=95"
+            _StyleDefs(93)  =   "Splits(0).Columns(14).HeadingStyle:id=155,.parent=96"
+            _StyleDefs(94)  =   "Splits(0).Columns(14).FooterStyle:id=156,.parent=97"
+            _StyleDefs(95)  =   "Splits(0).Columns(14).EditorStyle:id=157,.parent=99"
+            _StyleDefs(96)  =   "Splits(0).Columns(15).Style:id=162,.parent=95"
+            _StyleDefs(97)  =   "Splits(0).Columns(15).HeadingStyle:id=159,.parent=96"
+            _StyleDefs(98)  =   "Splits(0).Columns(15).FooterStyle:id=160,.parent=97"
+            _StyleDefs(99)  =   "Splits(0).Columns(15).EditorStyle:id=161,.parent=99"
+            _StyleDefs(100) =   "Splits(0).Columns(16).Style:id=166,.parent=95"
+            _StyleDefs(101) =   "Splits(0).Columns(16).HeadingStyle:id=163,.parent=96"
+            _StyleDefs(102) =   "Splits(0).Columns(16).FooterStyle:id=164,.parent=97"
+            _StyleDefs(103) =   "Splits(0).Columns(16).EditorStyle:id=165,.parent=99"
+            _StyleDefs(104) =   "Splits(1).Style:id=13,.parent=1"
+            _StyleDefs(105) =   "Splits(1).CaptionStyle:id=22,.parent=4"
+            _StyleDefs(106) =   "Splits(1).HeadingStyle:id=14,.parent=2"
+            _StyleDefs(107) =   "Splits(1).FooterStyle:id=15,.parent=3"
+            _StyleDefs(108) =   "Splits(1).InactiveStyle:id=16,.parent=5"
+            _StyleDefs(109) =   "Splits(1).SelectedStyle:id=18,.parent=6,.namedParent=38,.bgcolor=&H80&"
+            _StyleDefs(110) =   "Splits(1).EditorStyle:id=17,.parent=7"
+            _StyleDefs(111) =   "Splits(1).HighlightRowStyle:id=19,.parent=8,.bgcolor=&H80&"
+            _StyleDefs(112) =   "Splits(1).EvenRowStyle:id=20,.parent=9"
+            _StyleDefs(113) =   "Splits(1).OddRowStyle:id=21,.parent=10"
+            _StyleDefs(114) =   "Splits(1).RecordSelectorStyle:id=23,.parent=11"
+            _StyleDefs(115) =   "Splits(1).FilterBarStyle:id=24,.parent=12"
+            _StyleDefs(116) =   "Splits(1).Columns(0).Style:id=28,.parent=13"
+            _StyleDefs(117) =   "Splits(1).Columns(0).HeadingStyle:id=25,.parent=14"
+            _StyleDefs(118) =   "Splits(1).Columns(0).FooterStyle:id=26,.parent=15"
+            _StyleDefs(119) =   "Splits(1).Columns(0).EditorStyle:id=27,.parent=17"
+            _StyleDefs(120) =   "Splits(1).Columns(1).Style:id=82,.parent=13"
+            _StyleDefs(121) =   "Splits(1).Columns(1).HeadingStyle:id=79,.parent=14"
+            _StyleDefs(122) =   "Splits(1).Columns(1).FooterStyle:id=80,.parent=15"
+            _StyleDefs(123) =   "Splits(1).Columns(1).EditorStyle:id=81,.parent=17"
+            _StyleDefs(124) =   "Splits(1).Columns(2).Style:id=94,.parent=13"
+            _StyleDefs(125) =   "Splits(1).Columns(2).HeadingStyle:id=91,.parent=14"
+            _StyleDefs(126) =   "Splits(1).Columns(2).FooterStyle:id=92,.parent=15"
+            _StyleDefs(127) =   "Splits(1).Columns(2).EditorStyle:id=93,.parent=17"
+            _StyleDefs(128) =   "Splits(1).Columns(3).Style:id=122,.parent=13"
+            _StyleDefs(129) =   "Splits(1).Columns(3).HeadingStyle:id=119,.parent=14"
+            _StyleDefs(130) =   "Splits(1).Columns(3).FooterStyle:id=120,.parent=15"
+            _StyleDefs(131) =   "Splits(1).Columns(3).EditorStyle:id=121,.parent=17"
+            _StyleDefs(132) =   "Splits(1).Columns(4).Style:id=174,.parent=13"
+            _StyleDefs(133) =   "Splits(1).Columns(4).HeadingStyle:id=171,.parent=14"
+            _StyleDefs(134) =   "Splits(1).Columns(4).FooterStyle:id=172,.parent=15"
+            _StyleDefs(135) =   "Splits(1).Columns(4).EditorStyle:id=173,.parent=17"
+            _StyleDefs(136) =   "Splits(1).Columns(5).Style:id=32,.parent=13"
+            _StyleDefs(137) =   "Splits(1).Columns(5).HeadingStyle:id=29,.parent=14"
+            _StyleDefs(138) =   "Splits(1).Columns(5).FooterStyle:id=30,.parent=15"
+            _StyleDefs(139) =   "Splits(1).Columns(5).EditorStyle:id=31,.parent=17"
+            _StyleDefs(140) =   "Splits(1).Columns(6).Style:id=50,.parent=13,.alignment=2"
+            _StyleDefs(141) =   "Splits(1).Columns(6).HeadingStyle:id=47,.parent=14"
+            _StyleDefs(142) =   "Splits(1).Columns(6).FooterStyle:id=48,.parent=15"
+            _StyleDefs(143) =   "Splits(1).Columns(6).EditorStyle:id=49,.parent=17"
+            _StyleDefs(144) =   "Splits(1).Columns(7).Style:id=46,.parent=13,.alignment=2"
+            _StyleDefs(145) =   "Splits(1).Columns(7).HeadingStyle:id=43,.parent=14"
+            _StyleDefs(146) =   "Splits(1).Columns(7).FooterStyle:id=44,.parent=15"
+            _StyleDefs(147) =   "Splits(1).Columns(7).EditorStyle:id=45,.parent=17"
+            _StyleDefs(148) =   "Splits(1).Columns(8).Style:id=182,.parent=13,.alignment=2"
+            _StyleDefs(149) =   "Splits(1).Columns(8).HeadingStyle:id=179,.parent=14"
+            _StyleDefs(150) =   "Splits(1).Columns(8).FooterStyle:id=180,.parent=15"
+            _StyleDefs(151) =   "Splits(1).Columns(8).EditorStyle:id=181,.parent=17"
+            _StyleDefs(152) =   "Splits(1).Columns(9).Style:id=58,.parent=13"
+            _StyleDefs(153) =   "Splits(1).Columns(9).HeadingStyle:id=55,.parent=14"
+            _StyleDefs(154) =   "Splits(1).Columns(9).FooterStyle:id=56,.parent=15"
+            _StyleDefs(155) =   "Splits(1).Columns(9).EditorStyle:id=57,.parent=17"
+            _StyleDefs(156) =   "Splits(1).Columns(10).Style:id=90,.parent=13,.alignment=1"
+            _StyleDefs(157) =   "Splits(1).Columns(10).HeadingStyle:id=87,.parent=14"
+            _StyleDefs(158) =   "Splits(1).Columns(10).FooterStyle:id=88,.parent=15"
+            _StyleDefs(159) =   "Splits(1).Columns(10).EditorStyle:id=89,.parent=17"
+            _StyleDefs(160) =   "Splits(1).Columns(11).Style:id=54,.parent=13"
+            _StyleDefs(161) =   "Splits(1).Columns(11).HeadingStyle:id=51,.parent=14"
+            _StyleDefs(162) =   "Splits(1).Columns(11).FooterStyle:id=52,.parent=15"
+            _StyleDefs(163) =   "Splits(1).Columns(11).EditorStyle:id=53,.parent=17"
+            _StyleDefs(164) =   "Splits(1).Columns(12).Style:id=66,.parent=13"
+            _StyleDefs(165) =   "Splits(1).Columns(12).HeadingStyle:id=63,.parent=14"
+            _StyleDefs(166) =   "Splits(1).Columns(12).FooterStyle:id=64,.parent=15"
+            _StyleDefs(167) =   "Splits(1).Columns(12).EditorStyle:id=65,.parent=17"
+            _StyleDefs(168) =   "Splits(1).Columns(13).Style:id=86,.parent=13"
+            _StyleDefs(169) =   "Splits(1).Columns(13).HeadingStyle:id=83,.parent=14"
+            _StyleDefs(170) =   "Splits(1).Columns(13).FooterStyle:id=84,.parent=15"
+            _StyleDefs(171) =   "Splits(1).Columns(13).EditorStyle:id=85,.parent=17"
+            _StyleDefs(172) =   "Splits(1).Columns(14).Style:id=62,.parent=13"
+            _StyleDefs(173) =   "Splits(1).Columns(14).HeadingStyle:id=59,.parent=14"
+            _StyleDefs(174) =   "Splits(1).Columns(14).FooterStyle:id=60,.parent=15"
+            _StyleDefs(175) =   "Splits(1).Columns(14).EditorStyle:id=61,.parent=17"
+            _StyleDefs(176) =   "Splits(1).Columns(15).Style:id=70,.parent=13"
+            _StyleDefs(177) =   "Splits(1).Columns(15).HeadingStyle:id=67,.parent=14"
+            _StyleDefs(178) =   "Splits(1).Columns(15).FooterStyle:id=68,.parent=15"
+            _StyleDefs(179) =   "Splits(1).Columns(15).EditorStyle:id=69,.parent=17"
+            _StyleDefs(180) =   "Splits(1).Columns(16).Style:id=74,.parent=13"
+            _StyleDefs(181) =   "Splits(1).Columns(16).HeadingStyle:id=71,.parent=14"
+            _StyleDefs(182) =   "Splits(1).Columns(16).FooterStyle:id=72,.parent=15"
+            _StyleDefs(183) =   "Splits(1).Columns(16).EditorStyle:id=73,.parent=17"
+            _StyleDefs(184) =   "Named:id=33:Normal"
+            _StyleDefs(185) =   ":id=33,.parent=0"
+            _StyleDefs(186) =   "Named:id=34:Heading"
+            _StyleDefs(187) =   ":id=34,.parent=33,.valignment=2,.bgcolor=&H8000000F&,.fgcolor=&H80000012&"
+            _StyleDefs(188) =   ":id=34,.wraptext=-1"
+            _StyleDefs(189) =   "Named:id=35:Footing"
+            _StyleDefs(190) =   ":id=35,.parent=33,.valignment=2,.bgcolor=&H8000000F&,.fgcolor=&H80000012&"
+            _StyleDefs(191) =   "Named:id=36:Selected"
+            _StyleDefs(192) =   ":id=36,.parent=33,.bgcolor=&H8000000D&,.fgcolor=&H8000000E&"
+            _StyleDefs(193) =   "Named:id=37:Caption"
+            _StyleDefs(194) =   ":id=37,.parent=34,.alignment=2"
+            _StyleDefs(195) =   "Named:id=38:HighlightRow"
+            _StyleDefs(196) =   ":id=38,.parent=33,.bgcolor=&H8000000D&,.fgcolor=&H8000000E&"
+            _StyleDefs(197) =   "Named:id=39:EvenRow"
+            _StyleDefs(198) =   ":id=39,.parent=33,.bgcolor=&HFFFF00&"
+            _StyleDefs(199) =   "Named:id=40:OddRow"
+            _StyleDefs(200) =   ":id=40,.parent=33"
+            _StyleDefs(201) =   "Named:id=41:RecordSelector"
+            _StyleDefs(202) =   ":id=41,.parent=34"
+            _StyleDefs(203) =   "Named:id=42:FilterBar"
+            _StyleDefs(204) =   ":id=42,.parent=33"
+         End
+         Begin VB.Label Label2 
+            Alignment       =   2  'Center
+            Caption         =   "Devolución de Cuentas por Rendir"
+            BeginProperty Font 
+               Name            =   "Courier New"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00C00000&
+            Height          =   255
+            Left            =   15
+            TabIndex        =   5
+            Top             =   30
+            Width           =   11550
+         End
+      End
+      Begin VB.Frame Frame2 
+         BorderStyle     =   0  'None
+         Height          =   7140
+         Left            =   45
+         TabIndex        =   6
+         Top             =   375
+         Width           =   11625
+         Begin SizerOneLibCtl.TabOne TabOne2 
+            Height          =   4140
+            Left            =   195
+            TabIndex        =   14
+            Top             =   300
+            Width           =   10515
+            _cx             =   18547
+            _cy             =   7302
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Enabled         =   -1  'True
+            Appearance      =   2
+            MousePointer    =   0
+            _ConvInfo       =   1
+            Version         =   700
+            BackColor       =   -2147483633
+            ForeColor       =   -2147483630
+            FrontTabColor   =   -2147483633
+            BackTabColor    =   -2147483633
+            TabOutlineColor =   -2147483632
+            FrontTabForeColor=   8388608
+            Caption         =   "[Información de la Cuenta por Rendir]|           [Información Declarada]           "
+            Align           =   0
+            CurrTab         =   1
+            FirstTab        =   0
+            Style           =   0
+            Position        =   1
+            AutoSwitch      =   -1  'True
+            AutoScroll      =   -1  'True
+            TabPreview      =   -1  'True
+            ShowFocusRect   =   -1  'True
+            TabsPerPage     =   0
+            BorderWidth     =   0
+            BoldCurrent     =   0   'False
+            DogEars         =   -1  'True
+            MultiRow        =   0   'False
+            MultiRowOffset  =   200
+            CaptionStyle    =   0
+            TabHeight       =   0
+            TabCaptionPos   =   4
+            TabPicturePos   =   0
+            CaptionEmpty    =   ""
+            Separators      =   0   'False
+            Begin VB.Frame fr 
+               BorderStyle     =   0  'None
+               BeginProperty Font 
+                  Name            =   "MS Sans Serif"
+                  Size            =   8.25
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H00800000&
+               Height          =   3765
+               Index           =   0
+               Left            =   45
+               TabIndex        =   35
+               Top             =   45
+               Width           =   10425
+               Begin VB.TextBox txt_total 
+                  Alignment       =   1  'Right Justify
+                  BeginProperty Font 
+                     Name            =   "MS Sans Serif"
+                     Size            =   8.25
+                     Charset         =   0
+                     Weight          =   700
+                     Underline       =   0   'False
+                     Italic          =   0   'False
+                     Strikethrough   =   0   'False
+                  EndProperty
+                  ForeColor       =   &H000040C0&
+                  Height          =   315
+                  Index           =   2
+                  Left            =   6195
+                  Locked          =   -1  'True
+                  TabIndex        =   38
+                  Tag             =   "null"
+                  Top             =   3195
+                  Width           =   1095
+               End
+               Begin VB.TextBox txt_total 
+                  Alignment       =   1  'Right Justify
+                  Height          =   315
+                  Index           =   1
+                  Left            =   3885
+                  Locked          =   -1  'True
+                  TabIndex        =   37
+                  Tag             =   "null"
+                  Top             =   3195
+                  Width           =   1095
+               End
+               Begin VB.TextBox txt_total 
+                  Alignment       =   1  'Right Justify
+                  Height          =   315
+                  Index           =   0
+                  Left            =   1410
+                  Locked          =   -1  'True
+                  TabIndex        =   36
+                  Tag             =   "null"
+                  Top             =   3195
+                  Width           =   1095
+               End
+               Begin TrueOleDBGrid70.TDBGrid Dg1 
+                  Height          =   2760
+                  Left            =   150
+                  TabIndex        =   39
+                  Top             =   345
+                  Width           =   9720
+                  _ExtentX        =   17145
+                  _ExtentY        =   4868
+                  _LayoutType     =   4
+                  _RowHeight      =   -2147483647
+                  _WasPersistedAsPixels=   0
+                  Columns(0)._VlistStyle=   0
+                  Columns(0)._MaxComboItems=   5
+                  Columns(0).Caption=   "Num Reg."
+                  Columns(0).DataField=   "numreg"
+                  Columns(0)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+                  Columns(1)._VlistStyle=   0
+                  Columns(1)._MaxComboItems=   5
+                  Columns(1).Caption=   "Num. Compra"
+                  Columns(1).DataField=   "numcompra"
+                  Columns(1)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+                  Columns(2)._VlistStyle=   0
+                  Columns(2)._MaxComboItems=   5
+                  Columns(2).Caption=   "Fch. Pag."
+                  Columns(2).DataField=   "fchope"
+                  Columns(2)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+                  Columns(3)._VlistStyle=   0
+                  Columns(3)._MaxComboItems=   5
+                  Columns(3).Caption=   "Num. Operación"
+                  Columns(3).DataField=   "numope"
+                  Columns(3)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+                  Columns(4)._VlistStyle=   0
+                  Columns(4)._MaxComboItems=   5
+                  Columns(4).Caption=   "M"
+                  Columns(4).DataField=   "simbolo"
+                  Columns(4)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+                  Columns(5)._VlistStyle=   0
+                  Columns(5)._MaxComboItems=   5
+                  Columns(5).Caption=   "Importe"
+                  Columns(5).DataField=   "importe"
+                  Columns(5)._PropDict=   "_MaxComboItems,516,2;_VlistStyle,514,3"
+                  Columns.Count   =   6
+                  Splits(0)._UserFlags=   0
+                  Splits(0).MarqueeStyle=   3
+                  Splits(0).RecordSelectorWidth=   503
+                  Splits(0)._SavedRecordSelectors=   0   'False
+                  Splits(0).DividerColor=   12632256
+                  Splits(0).SpringMode=   0   'False
+                  Splits(0)._PropDict=   "_ColumnProps,515,0;_UserFlags,518,3"
+                  Splits(0)._ColumnProps(0)=   "Columns.Count=6"
+                  Splits(0)._ColumnProps(1)=   "Column(0).Width=1905"
+                  Splits(0)._ColumnProps(2)=   "Column(0).DividerColor=0"
+                  Splits(0)._ColumnProps(3)=   "Column(0)._WidthInPix=1826"
+                  Splits(0)._ColumnProps(4)=   "Column(0)._EditAlways=0"
+                  Splits(0)._ColumnProps(5)=   "Column(0)._ColStyle=513"
+                  Splits(0)._ColumnProps(6)=   "Column(0).Order=1"
+                  Splits(0)._ColumnProps(7)=   "Column(1).Width=3916"
+                  Splits(0)._ColumnProps(8)=   "Column(1).DividerColor=0"
+                  Splits(0)._ColumnProps(9)=   "Column(1)._WidthInPix=3836"
+                  Splits(0)._ColumnProps(10)=   "Column(1)._EditAlways=0"
+                  Splits(0)._ColumnProps(11)=   "Column(1)._ColStyle=512"
+                  Splits(0)._ColumnProps(12)=   "Column(1).Order=2"
+                  Splits(0)._ColumnProps(13)=   "Column(2).Width=2381"
+                  Splits(0)._ColumnProps(14)=   "Column(2).DividerColor=0"
+                  Splits(0)._ColumnProps(15)=   "Column(2)._WidthInPix=2302"
+                  Splits(0)._ColumnProps(16)=   "Column(2)._EditAlways=0"
+                  Splits(0)._ColumnProps(17)=   "Column(2)._ColStyle=513"
+                  Splits(0)._ColumnProps(18)=   "Column(2).Order=3"
+                  Splits(0)._ColumnProps(19)=   "Column(3).Width=2725"
+                  Splits(0)._ColumnProps(20)=   "Column(3).DividerColor=0"
+                  Splits(0)._ColumnProps(21)=   "Column(3)._WidthInPix=2646"
+                  Splits(0)._ColumnProps(22)=   "Column(3)._EditAlways=0"
+                  Splits(0)._ColumnProps(23)=   "Column(3)._ColStyle=512"
+                  Splits(0)._ColumnProps(24)=   "Column(3).Order=4"
+                  Splits(0)._ColumnProps(25)=   "Column(4).Width=873"
+                  Splits(0)._ColumnProps(26)=   "Column(4).DividerColor=0"
+                  Splits(0)._ColumnProps(27)=   "Column(4)._WidthInPix=794"
+                  Splits(0)._ColumnProps(28)=   "Column(4)._EditAlways=0"
+                  Splits(0)._ColumnProps(29)=   "Column(4)._ColStyle=513"
+                  Splits(0)._ColumnProps(30)=   "Column(4).Order=5"
+                  Splits(0)._ColumnProps(31)=   "Column(5).Width=2196"
+                  Splits(0)._ColumnProps(32)=   "Column(5).DividerColor=0"
+                  Splits(0)._ColumnProps(33)=   "Column(5)._WidthInPix=2117"
+                  Splits(0)._ColumnProps(34)=   "Column(5)._EditAlways=0"
+                  Splits(0)._ColumnProps(35)=   "Column(5)._ColStyle=514"
+                  Splits(0)._ColumnProps(36)=   "Column(5).Order=6"
+                  Splits.Count    =   1
+                  PrintInfos(0)._StateFlags=   3
+                  PrintInfos(0).Name=   "piInternal 0"
+                  PrintInfos(0).PageHeaderFont=   "Size=8.25,Charset=0,Weight=400,Underline=0,Italic=0,Strikethrough=0,Name=MS Sans Serif"
+                  PrintInfos(0).PageFooterFont=   "Size=8.25,Charset=0,Weight=400,Underline=0,Italic=0,Strikethrough=0,Name=MS Sans Serif"
+                  PrintInfos(0).PageHeaderHeight=   0
+                  PrintInfos(0).PageFooterHeight=   0
+                  PrintInfos.Count=   1
+                  AllowUpdate     =   0   'False
+                  Appearance      =   0
+                  ColumnFooters   =   -1  'True
+                  DefColWidth     =   0
+                  HeadLines       =   1
+                  FootLines       =   1
+                  MultipleLines   =   0
+                  CellTipsWidth   =   0
+                  DeadAreaBackColor=   12632256
+                  RowDividerColor =   12632256
+                  RowSubDividerColor=   12632256
+                  DirectionAfterEnter=   1
+                  MaxRows         =   250000
+                  ViewColumnCaptionWidth=   0
+                  ViewColumnWidth =   0
+                  _PropDict       =   "_ExtentX,2003,3;_ExtentY,2004,3;_LayoutType,512,2;_RowHeight,16,3;_StyleDefs,513,0;_WasPersistedAsPixels,516,2"
+                  _StyleDefs(0)   =   "_StyleRoot:id=0,.parent=-1,.alignment=3,.valignment=0,.bgcolor=&H80000005&"
+                  _StyleDefs(1)   =   ":id=0,.fgcolor=&H80000008&,.wraptext=0,.locked=0,.transparentBmp=0"
+                  _StyleDefs(2)   =   ":id=0,.fgpicPosition=0,.bgpicMode=0,.appearance=0,.borderSize=0,.ellipsis=0"
+                  _StyleDefs(3)   =   ":id=0,.borderColor=&H80000005&,.borderType=0,.bold=0,.fontsize=825,.italic=0"
+                  _StyleDefs(4)   =   ":id=0,.underline=0,.strikethrough=0,.charset=0"
+                  _StyleDefs(5)   =   ":id=0,.fontname=MS Sans Serif"
+                  _StyleDefs(6)   =   "Style:id=1,.parent=0,.namedParent=33,.bgcolor=&HDBFDFD&,.bold=0,.fontsize=825"
+                  _StyleDefs(7)   =   ":id=1,.italic=0,.underline=0,.strikethrough=0,.charset=0"
+                  _StyleDefs(8)   =   ":id=1,.fontname=MS Sans Serif"
+                  _StyleDefs(9)   =   "CaptionStyle:id=4,.parent=2,.namedParent=37"
+                  _StyleDefs(10)  =   "HeadingStyle:id=2,.parent=1,.namedParent=34,.alignment=2,.fgcolor=&H800000&"
+                  _StyleDefs(11)  =   ":id=2,.bold=0,.fontsize=825,.italic=0,.underline=0,.strikethrough=0,.charset=0"
+                  _StyleDefs(12)  =   ":id=2,.fontname=MS Sans Serif"
+                  _StyleDefs(13)  =   "FooterStyle:id=3,.parent=1,.namedParent=35,.bold=0,.fontsize=825,.italic=0"
+                  _StyleDefs(14)  =   ":id=3,.underline=0,.strikethrough=0,.charset=0"
+                  _StyleDefs(15)  =   ":id=3,.fontname=MS Sans Serif"
+                  _StyleDefs(16)  =   "InactiveStyle:id=5,.parent=2,.bgcolor=&H8000000F&,.fgcolor=&H80000012&"
+                  _StyleDefs(17)  =   "SelectedStyle:id=6,.parent=1,.namedParent=36,.bgcolor=&H80&"
+                  _StyleDefs(18)  =   "EditorStyle:id=7,.parent=1"
+                  _StyleDefs(19)  =   "HighlightRowStyle:id=8,.parent=1,.namedParent=38"
+                  _StyleDefs(20)  =   "EvenRowStyle:id=9,.parent=1,.namedParent=39"
+                  _StyleDefs(21)  =   "OddRowStyle:id=10,.parent=1,.namedParent=40"
+                  _StyleDefs(22)  =   "RecordSelectorStyle:id=11,.parent=2,.namedParent=41"
+                  _StyleDefs(23)  =   "FilterBarStyle:id=12,.parent=1,.namedParent=42"
+                  _StyleDefs(24)  =   "Splits(0).Style:id=13,.parent=1"
+                  _StyleDefs(25)  =   "Splits(0).CaptionStyle:id=22,.parent=4"
+                  _StyleDefs(26)  =   "Splits(0).HeadingStyle:id=14,.parent=2"
+                  _StyleDefs(27)  =   "Splits(0).FooterStyle:id=15,.parent=3"
+                  _StyleDefs(28)  =   "Splits(0).InactiveStyle:id=16,.parent=5"
+                  _StyleDefs(29)  =   "Splits(0).SelectedStyle:id=18,.parent=6,.namedParent=38,.bgcolor=&H80&"
+                  _StyleDefs(30)  =   "Splits(0).EditorStyle:id=17,.parent=7"
+                  _StyleDefs(31)  =   "Splits(0).HighlightRowStyle:id=19,.parent=8,.bgcolor=&H80&"
+                  _StyleDefs(32)  =   "Splits(0).EvenRowStyle:id=20,.parent=9"
+                  _StyleDefs(33)  =   "Splits(0).OddRowStyle:id=21,.parent=10"
+                  _StyleDefs(34)  =   "Splits(0).RecordSelectorStyle:id=23,.parent=11"
+                  _StyleDefs(35)  =   "Splits(0).FilterBarStyle:id=24,.parent=12"
+                  _StyleDefs(36)  =   "Splits(0).Columns(0).Style:id=28,.parent=13,.alignment=2"
+                  _StyleDefs(37)  =   "Splits(0).Columns(0).HeadingStyle:id=25,.parent=14"
+                  _StyleDefs(38)  =   "Splits(0).Columns(0).FooterStyle:id=26,.parent=15"
+                  _StyleDefs(39)  =   "Splits(0).Columns(0).EditorStyle:id=27,.parent=17"
+                  _StyleDefs(40)  =   "Splits(0).Columns(1).Style:id=32,.parent=13,.alignment=0"
+                  _StyleDefs(41)  =   "Splits(0).Columns(1).HeadingStyle:id=29,.parent=14"
+                  _StyleDefs(42)  =   "Splits(0).Columns(1).FooterStyle:id=30,.parent=15"
+                  _StyleDefs(43)  =   "Splits(0).Columns(1).EditorStyle:id=31,.parent=17"
+                  _StyleDefs(44)  =   "Splits(0).Columns(2).Style:id=50,.parent=13,.alignment=2"
+                  _StyleDefs(45)  =   "Splits(0).Columns(2).HeadingStyle:id=47,.parent=14"
+                  _StyleDefs(46)  =   "Splits(0).Columns(2).FooterStyle:id=48,.parent=15"
+                  _StyleDefs(47)  =   "Splits(0).Columns(2).EditorStyle:id=49,.parent=17"
+                  _StyleDefs(48)  =   "Splits(0).Columns(3).Style:id=86,.parent=13,.alignment=0"
+                  _StyleDefs(49)  =   "Splits(0).Columns(3).HeadingStyle:id=83,.parent=14"
+                  _StyleDefs(50)  =   "Splits(0).Columns(3).FooterStyle:id=84,.parent=15"
+                  _StyleDefs(51)  =   "Splits(0).Columns(3).EditorStyle:id=85,.parent=17"
+                  _StyleDefs(52)  =   "Splits(0).Columns(4).Style:id=46,.parent=13,.alignment=2"
+                  _StyleDefs(53)  =   "Splits(0).Columns(4).HeadingStyle:id=43,.parent=14"
+                  _StyleDefs(54)  =   "Splits(0).Columns(4).FooterStyle:id=44,.parent=15"
+                  _StyleDefs(55)  =   "Splits(0).Columns(4).EditorStyle:id=45,.parent=17"
+                  _StyleDefs(56)  =   "Splits(0).Columns(5).Style:id=90,.parent=13,.alignment=1"
+                  _StyleDefs(57)  =   "Splits(0).Columns(5).HeadingStyle:id=87,.parent=14"
+                  _StyleDefs(58)  =   "Splits(0).Columns(5).FooterStyle:id=88,.parent=15"
+                  _StyleDefs(59)  =   "Splits(0).Columns(5).EditorStyle:id=89,.parent=17"
+                  _StyleDefs(60)  =   "Named:id=33:Normal"
+                  _StyleDefs(61)  =   ":id=33,.parent=0"
+                  _StyleDefs(62)  =   "Named:id=34:Heading"
+                  _StyleDefs(63)  =   ":id=34,.parent=33,.valignment=2,.bgcolor=&H8000000F&,.fgcolor=&H80000012&"
+                  _StyleDefs(64)  =   ":id=34,.wraptext=-1"
+                  _StyleDefs(65)  =   "Named:id=35:Footing"
+                  _StyleDefs(66)  =   ":id=35,.parent=33,.valignment=2,.bgcolor=&H8000000F&,.fgcolor=&H80000012&"
+                  _StyleDefs(67)  =   "Named:id=36:Selected"
+                  _StyleDefs(68)  =   ":id=36,.parent=33,.bgcolor=&H8000000D&,.fgcolor=&H8000000E&"
+                  _StyleDefs(69)  =   "Named:id=37:Caption"
+                  _StyleDefs(70)  =   ":id=37,.parent=34,.alignment=2"
+                  _StyleDefs(71)  =   "Named:id=38:HighlightRow"
+                  _StyleDefs(72)  =   ":id=38,.parent=33,.bgcolor=&H8000000D&,.fgcolor=&H8000000E&"
+                  _StyleDefs(73)  =   "Named:id=39:EvenRow"
+                  _StyleDefs(74)  =   ":id=39,.parent=33,.bgcolor=&HFFFF00&"
+                  _StyleDefs(75)  =   "Named:id=40:OddRow"
+                  _StyleDefs(76)  =   ":id=40,.parent=33"
+                  _StyleDefs(77)  =   "Named:id=41:RecordSelector"
+                  _StyleDefs(78)  =   ":id=41,.parent=34"
+                  _StyleDefs(79)  =   "Named:id=42:FilterBar"
+                  _StyleDefs(80)  =   ":id=42,.parent=33"
+               End
+               Begin VB.Label lbl_total 
+                  AutoSize        =   -1  'True
+                  Caption         =   "Por Rendir"
+                  Height          =   195
+                  Index           =   2
+                  Left            =   5385
+                  TabIndex        =   42
+                  Top             =   3315
+                  Width           =   750
+               End
+               Begin VB.Label lbl_total 
+                  AutoSize        =   -1  'True
+                  Caption         =   "Total Declarado"
+                  Height          =   195
+                  Index           =   1
+                  Left            =   2670
+                  TabIndex        =   41
+                  Top             =   3315
+                  Width           =   1140
+               End
+               Begin VB.Label lbl_total 
+                  AutoSize        =   -1  'True
+                  Caption         =   "Total Entregado"
+                  Height          =   195
+                  Index           =   0
+                  Left            =   165
+                  TabIndex        =   40
+                  Top             =   3315
+                  Width           =   1140
+               End
+            End
+            Begin VB.Frame fr 
+               BorderStyle     =   0  'None
+               BeginProperty Font 
+                  Name            =   "MS Sans Serif"
+                  Size            =   8.25
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H00800000&
+               Height          =   3765
+               Index           =   1
+               Left            =   -11070
+               TabIndex        =   15
+               Top             =   45
+               Width           =   10425
+               Begin VB.Frame fr 
+                  Caption         =   "[Del Beneficiario]"
+                  BeginProperty Font 
+                     Name            =   "MS Sans Serif"
+                     Size            =   8.25
+                     Charset         =   0
+                     Weight          =   700
+                     Underline       =   0   'False
+                     Italic          =   0   'False
+                     Strikethrough   =   0   'False
+                  EndProperty
+                  ForeColor       =   &H00800000&
+                  Height          =   720
+                  Index           =   2
+                  Left            =   3375
+                  TabIndex        =   23
+                  Top             =   2700
+                  Width           =   6945
+                  Begin VB.Label lbl_dato 
+                     BackStyle       =   0  'Transparent
+                     BorderStyle     =   1  'Fixed Single
+                     BeginProperty Font 
+                        Name            =   "MS Sans Serif"
+                        Size            =   8.25
+                        Charset         =   0
+                        Weight          =   700
+                        Underline       =   0   'False
+                        Italic          =   0   'False
+                        Strikethrough   =   0   'False
+                     EndProperty
+                     ForeColor       =   &H00800000&
+                     Height          =   300
+                     Index           =   9
+                     Left            =   1605
+                     TabIndex        =   25
+                     Top             =   285
+                     Width           =   5235
+                  End
+                  Begin VB.Label lbl_dato_x 
+                     AutoSize        =   -1  'True
+                     Caption         =   "Persona"
+                     Height          =   195
+                     Index           =   9
+                     Left            =   180
+                     TabIndex        =   24
+                     Top             =   360
+                     Width           =   1365
+                  End
+               End
+               Begin VB.Frame fr 
+                  Caption         =   "[Del Destino]"
+                  BeginProperty Font 
+                     Name            =   "MS Sans Serif"
+                     Size            =   8.25
+                     Charset         =   0
+                     Weight          =   700
+                     Underline       =   0   'False
+                     Italic          =   0   'False
+                     Strikethrough   =   0   'False
+                  EndProperty
+                  ForeColor       =   &H00800000&
+                  Height          =   720
+                  Index           =   3
+                  Left            =   3330
+                  TabIndex        =   20
+                  Top             =   1680
+                  Width           =   6945
+                  Begin VB.Label lbl_dato 
+                     BackStyle       =   0  'Transparent
+                     BorderStyle     =   1  'Fixed Single
+                     BeginProperty Font 
+                        Name            =   "MS Sans Serif"
+                        Size            =   8.25
+                        Charset         =   0
+                        Weight          =   700
+                        Underline       =   0   'False
+                        Italic          =   0   'False
+                        Strikethrough   =   0   'False
+                     EndProperty
+                     ForeColor       =   &H00800000&
+                     Height          =   300
+                     Index           =   8
+                     Left            =   1605
+                     TabIndex        =   22
+                     Top             =   285
+                     Width           =   5235
+                  End
+                  Begin VB.Label lbl_dato_x 
+                     AutoSize        =   -1  'True
+                     Caption         =   "Destino"
+                     Height          =   195
+                     Index           =   8
+                     Left            =   180
+                     TabIndex        =   21
+                     Top             =   360
+                     Width           =   540
+                  End
+               End
+               Begin VB.Frame fr 
+                  Caption         =   "[Del Origen]"
+                  BeginProperty Font 
+                     Name            =   "MS Sans Serif"
+                     Size            =   8.25
+                     Charset         =   0
+                     Weight          =   700
+                     Underline       =   0   'False
+                     Italic          =   0   'False
+                     Strikethrough   =   0   'False
+                  EndProperty
+                  ForeColor       =   &H00800000&
+                  Height          =   720
+                  Index           =   4
+                  Left            =   3345
+                  TabIndex        =   17
+                  Top             =   660
+                  Width           =   6945
+                  Begin VB.Label lbl_dato 
+                     BackStyle       =   0  'Transparent
+                     BorderStyle     =   1  'Fixed Single
+                     BeginProperty Font 
+                        Name            =   "MS Sans Serif"
+                        Size            =   8.25
+                        Charset         =   0
+                        Weight          =   700
+                        Underline       =   0   'False
+                        Italic          =   0   'False
+                        Strikethrough   =   0   'False
+                     EndProperty
+                     ForeColor       =   &H00800000&
+                     Height          =   300
+                     Index           =   7
+                     Left            =   1605
+                     TabIndex        =   19
+                     Top             =   285
+                     Width           =   5235
+                  End
+                  Begin VB.Label lbl_dato_x 
+                     AutoSize        =   -1  'True
+                     Caption         =   "Caja"
+                     Height          =   195
+                     Index           =   7
+                     Left            =   180
+                     TabIndex        =   18
+                     Top             =   360
+                     Width           =   315
+                  End
+               End
+               Begin VB.CommandButton cb 
+                  Height          =   255
+                  Left            =   1890
+                  Picture         =   "FrmCuentasRendir_Dev.frx":0000
+                  Style           =   1  'Graphical
+                  TabIndex        =   16
+                  Top             =   255
+                  Width           =   240
+               End
+               Begin VB.TextBox txt_cb 
+                  Height          =   300
+                  Index           =   0
+                  Left            =   1290
+                  MaxLength       =   20
+                  TabIndex        =   26
+                  Top             =   225
+                  Width           =   855
+               End
+               Begin VB.Label lbl_dato_x 
+                  AutoSize        =   -1  'True
+                  Caption         =   "Fecha Rend. Cta."
+                  Height          =   195
+                  Index           =   5
+                  Left            =   210
+                  TabIndex        =   51
+                  Top             =   1654
+                  Width           =   1260
+               End
+               Begin VB.Label lbl_dato 
+                  BackStyle       =   0  'Transparent
+                  BorderStyle     =   1  'Fixed Single
+                  BeginProperty Font 
+                     Name            =   "MS Sans Serif"
+                     Size            =   8.25
+                     Charset         =   0
+                     Weight          =   700
+                     Underline       =   0   'False
+                     Italic          =   0   'False
+                     Strikethrough   =   0   'False
+                  EndProperty
+                  ForeColor       =   &H00800000&
+                  Height          =   300
+                  Index           =   10
+                  Left            =   1725
+                  TabIndex        =   50
+                  Top             =   1560
+                  Width           =   1515
+               End
+               Begin VB.Label lbl_dato 
+                  BackStyle       =   0  'Transparent
+                  BorderStyle     =   1  'Fixed Single
+                  BeginProperty Font 
+                     Name            =   "MS Sans Serif"
+                     Size            =   8.25
+                     Charset         =   0
+                     Weight          =   700
+                     Underline       =   0   'False
+                     Italic          =   0   'False
+                     Strikethrough   =   0   'False
+                  EndProperty
+                  ForeColor       =   &H00800000&
+                  Height          =   300
+                  Index           =   1
+                  Left            =   1725
+                  TabIndex        =   48
+                  Top             =   780
+                  Width           =   1515
+               End
+               Begin VB.Label lbl_dato_x 
+                  AutoSize        =   -1  'True
+                  Caption         =   "Fecha Emisión"
+                  Height          =   195
+                  Index           =   1
+                  Left            =   210
+                  TabIndex        =   47
+                  Top             =   870
+                  Width           =   1035
+               End
+               Begin VB.Label lbl_dato 
+                  BackStyle       =   0  'Transparent
+                  BorderStyle     =   1  'Fixed Single
+                  BeginProperty Font 
+                     Name            =   "MS Sans Serif"
+                     Size            =   8.25
+                     Charset         =   0
+                     Weight          =   700
+                     Underline       =   0   'False
+                     Italic          =   0   'False
+                     Strikethrough   =   0   'False
+                  EndProperty
+                  ForeColor       =   &H00800000&
+                  Height          =   300
+                  Index           =   6
+                  Left            =   1725
+                  TabIndex        =   46
+                  Top             =   3120
+                  Width           =   1515
+               End
+               Begin VB.Label lbl_dato 
+                  BackStyle       =   0  'Transparent
+                  BorderStyle     =   1  'Fixed Single
+                  BeginProperty Font 
+                     Name            =   "MS Sans Serif"
+                     Size            =   8.25
+                     Charset         =   0
+                     Weight          =   700
+                     Underline       =   0   'False
+                     Italic          =   0   'False
+                     Strikethrough   =   0   'False
+                  EndProperty
+                  ForeColor       =   &H00800000&
+                  Height          =   300
+                  Index           =   5
+                  Left            =   1725
+                  TabIndex        =   45
+                  Top             =   2730
+                  Width           =   1515
+               End
+               Begin VB.Label lbl_dato 
+                  BackStyle       =   0  'Transparent
+                  BorderStyle     =   1  'Fixed Single
+                  BeginProperty Font 
+                     Name            =   "MS Sans Serif"
+                     Size            =   8.25
+                     Charset         =   0
+                     Weight          =   700
+                     Underline       =   0   'False
+                     Italic          =   0   'False
+                     Strikethrough   =   0   'False
+                  EndProperty
+                  ForeColor       =   &H00800000&
+                  Height          =   300
+                  Index           =   3
+                  Left            =   1725
+                  TabIndex        =   44
+                  Top             =   2340
+                  Width           =   1515
+               End
+               Begin VB.Label lbl_dato 
+                  BackStyle       =   0  'Transparent
+                  BorderStyle     =   1  'Fixed Single
+                  BeginProperty Font 
+                     Name            =   "MS Sans Serif"
+                     Size            =   8.25
+                     Charset         =   0
+                     Weight          =   700
+                     Underline       =   0   'False
+                     Italic          =   0   'False
+                     Strikethrough   =   0   'False
+                  EndProperty
+                  ForeColor       =   &H00800000&
+                  Height          =   300
+                  Index           =   2
+                  Left            =   1725
+                  TabIndex        =   43
+                  Top             =   1170
+                  Width           =   1515
+               End
+               Begin VB.Label lbl_dato 
+                  BackStyle       =   0  'Transparent
+                  BorderStyle     =   1  'Fixed Single
+                  BeginProperty Font 
+                     Name            =   "MS Sans Serif"
+                     Size            =   8.25
+                     Charset         =   0
+                     Weight          =   700
+                     Underline       =   0   'False
+                     Italic          =   0   'False
+                     Strikethrough   =   0   'False
+                  EndProperty
+                  ForeColor       =   &H00800000&
+                  Height          =   300
+                  Index           =   4
+                  Left            =   1725
+                  TabIndex        =   34
+                  Top             =   1950
+                  Width           =   1515
+               End
+               Begin VB.Label lbl 
+                  AutoSize        =   -1  'True
+                  Caption         =   "Importe"
+                  Height          =   195
+                  Index           =   6
+                  Left            =   210
+                  TabIndex        =   33
+                  Top             =   3225
+                  Width           =   525
+               End
+               Begin VB.Label lbl_dato_x 
+                  AutoSize        =   -1  'True
+                  Caption         =   "Tipo de Documento"
+                  Height          =   195
+                  Index           =   3
+                  Left            =   210
+                  TabIndex        =   32
+                  Top             =   2438
+                  Width           =   1410
+               End
+               Begin VB.Label lbl 
+                  AutoSize        =   -1  'True
+                  Caption         =   "N° de Documento"
+                  Height          =   195
+                  Index           =   5
+                  Left            =   210
+                  TabIndex        =   31
+                  Top             =   2830
+                  Width           =   1275
+               End
+               Begin VB.Label lbl_dato_x 
+                  AutoSize        =   -1  'True
+                  Caption         =   "Fecha Pago"
+                  Height          =   195
+                  Index           =   2
+                  Left            =   210
+                  TabIndex        =   30
+                  Top             =   1262
+                  Width           =   870
+               End
+               Begin VB.Label lbl_dato_x 
+                  AutoSize        =   -1  'True
+                  Caption         =   "Moneda"
+                  Height          =   195
+                  Index           =   4
+                  Left            =   210
+                  TabIndex        =   29
+                  Top             =   2046
+                  Width           =   585
+               End
+               Begin VB.Label lbl_dato 
+                  BackColor       =   &H000000FF&
+                  BorderStyle     =   1  'Fixed Single
+                  BeginProperty Font 
+                     Name            =   "MS Sans Serif"
+                     Size            =   8.25
+                     Charset         =   0
+                     Weight          =   700
+                     Underline       =   0   'False
+                     Italic          =   0   'False
+                     Strikethrough   =   0   'False
+                  EndProperty
+                  ForeColor       =   &H00C00000&
+                  Height          =   300
+                  Index           =   0
+                  Left            =   2175
+                  TabIndex        =   28
+                  Top             =   240
+                  Visible         =   0   'False
+                  Width           =   600
+               End
+               Begin VB.Label lbl_dato_x 
+                  AutoSize        =   -1  'True
+                  Caption         =   "Cta por Rendir"
+                  Height          =   195
+                  Index           =   0
+                  Left            =   240
+                  TabIndex        =   27
+                  Top             =   360
+                  Width           =   1020
+               End
+            End
+         End
+         Begin VB.TextBox txt 
+            Height          =   1260
+            Index           =   2
+            Left            =   270
+            MultiLine       =   -1  'True
+            ScrollBars      =   2  'Vertical
+            TabIndex        =   3
+            Tag             =   "null"
+            Top             =   5655
+            Width           =   10455
+         End
+         Begin VB.TextBox txt 
+            Alignment       =   1  'Right Justify
+            Height          =   315
+            Index           =   1
+            Left            =   1725
+            TabIndex        =   2
+            Top             =   5070
+            Width           =   1605
+         End
+         Begin VB.TextBox txt 
+            BackColor       =   &H0000FFFF&
+            Height          =   315
+            Index           =   0
+            Left            =   3690
+            TabIndex        =   10
+            Tag             =   "null"
+            Top             =   4695
+            Visible         =   0   'False
+            Width           =   1170
+         End
+         Begin AspaTextBoxFecha.TextBoxFecha txtfecha 
+            Height          =   300
+            Index           =   0
+            Left            =   1725
+            TabIndex        =   0
+            Tag             =   "b"
+            Top             =   4710
+            Width           =   1260
+            _ExtentX        =   2223
+            _ExtentY        =   529
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+         End
+         Begin VB.Label lbl 
+            AutoSize        =   -1  'True
+            Caption         =   "Observación"
+            Height          =   195
+            Index           =   2
+            Left            =   285
+            TabIndex        =   13
+            Top             =   5445
+            Width           =   900
+         End
+         Begin VB.Label lbl 
+            AutoSize        =   -1  'True
+            Caption         =   "Importe a Devolver"
+            Height          =   195
+            Index           =   1
+            Left            =   255
+            TabIndex        =   12
+            Top             =   5190
+            Width           =   1350
+         End
+         Begin VB.Label lblfch 
+            AutoSize        =   -1  'True
+            Caption         =   "Fecha Emisión"
+            Height          =   195
+            Index           =   0
+            Left            =   255
+            TabIndex        =   11
+            Top             =   4770
+            Width           =   1035
+         End
+         Begin VB.Label lbl 
+            AutoSize        =   -1  'True
+            Caption         =   "codigo"
+            Height          =   195
+            Index           =   0
+            Left            =   3090
+            TabIndex        =   9
+            Top             =   4815
+            Visible         =   0   'False
+            Width           =   480
+         End
+         Begin VB.Label Label1 
+            Alignment       =   2  'Center
+            Caption         =   "Detalle de Devolución de Cuentas por Rendir"
+            BeginProperty Font 
+               Name            =   "Courier New"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00C00000&
+            Height          =   255
+            Left            =   0
+            TabIndex        =   7
+            Top             =   15
+            Width           =   11550
+         End
+      End
+   End
+   Begin MSComctlLib.ImageList ImageList1 
+      Left            =   0
+      Top             =   0
+      _ExtentX        =   1005
+      _ExtentY        =   1005
+      BackColor       =   -2147483637
+      ImageWidth      =   16
+      ImageHeight     =   15
+      MaskColor       =   12632256
+      _Version        =   393216
+      BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
+         NumListImages   =   12
+         BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmCuentasRendir_Dev.frx":0132
+            Key             =   "IMG1"
+         EndProperty
+         BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmCuentasRendir_Dev.frx":0676
+            Key             =   ""
+         EndProperty
+         BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmCuentasRendir_Dev.frx":0A08
+            Key             =   "IMG2"
+         EndProperty
+         BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmCuentasRendir_Dev.frx":0B8C
+            Key             =   "IMG3"
+         EndProperty
+         BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmCuentasRendir_Dev.frx":0FE0
+            Key             =   "IMG4"
+         EndProperty
+         BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmCuentasRendir_Dev.frx":10F8
+            Key             =   "IMG5"
+         EndProperty
+         BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmCuentasRendir_Dev.frx":163C
+            Key             =   "IMG6"
+         EndProperty
+         BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmCuentasRendir_Dev.frx":1B80
+            Key             =   "IMG7"
+         EndProperty
+         BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmCuentasRendir_Dev.frx":1C94
+            Key             =   "IMG8"
+         EndProperty
+         BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmCuentasRendir_Dev.frx":1DA8
+            Key             =   "IMG9"
+         EndProperty
+         BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmCuentasRendir_Dev.frx":21FC
+            Key             =   "IMG10"
+         EndProperty
+         BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+            Picture         =   "FrmCuentasRendir_Dev.frx":2368
+            Key             =   "IMG11"
+         EndProperty
+      EndProperty
+   End
+   Begin MSComctlLib.Toolbar Toolbar1 
+      Align           =   1  'Align Top
+      Height          =   570
+      Left            =   0
+      TabIndex        =   49
+      Top             =   0
+      Width           =   11775
+      _ExtentX        =   20770
+      _ExtentY        =   1005
+      ButtonWidth     =   609
+      ButtonHeight    =   556
+      Appearance      =   1
+      Style           =   1
+      ImageList       =   "ImageList1"
+      _Version        =   393216
+      BeginProperty Buttons {66833FE8-8583-11D1-B16A-00C0F0283628} 
+         NumButtons      =   15
+         BeginProperty Button1 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Object.ToolTipText     =   "Agregar "
+            ImageIndex      =   1
+         EndProperty
+         BeginProperty Button2 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Object.ToolTipText     =   "Modificar "
+            ImageIndex      =   3
+         EndProperty
+         BeginProperty Button3 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Object.ToolTipText     =   "Eliminar "
+            ImageIndex      =   5
+         EndProperty
+         BeginProperty Button4 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Style           =   3
+         EndProperty
+         BeginProperty Button5 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Enabled         =   0   'False
+            Object.ToolTipText     =   "Grabar"
+            ImageIndex      =   7
+         EndProperty
+         BeginProperty Button6 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Enabled         =   0   'False
+            Object.ToolTipText     =   "Cancelar"
+            ImageIndex      =   6
+         EndProperty
+         BeginProperty Button7 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Style           =   3
+         EndProperty
+         BeginProperty Button8 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Object.ToolTipText     =   "Filtrar"
+            ImageIndex      =   8
+         EndProperty
+         BeginProperty Button9 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Object.ToolTipText     =   "Quitar Filtro"
+            ImageIndex      =   9
+         EndProperty
+         BeginProperty Button10 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Object.ToolTipText     =   "Cambiar Mes"
+            ImageIndex      =   2
+         EndProperty
+         BeginProperty Button11 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Object.ToolTipText     =   "Buscar"
+            ImageIndex      =   10
+         EndProperty
+         BeginProperty Button12 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Style           =   3
+         EndProperty
+         BeginProperty Button13 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Object.ToolTipText     =   "Imprimir"
+            ImageIndex      =   12
+            Style           =   5
+            BeginProperty ButtonMenus {66833FEC-8583-11D1-B16A-00C0F0283628} 
+               NumButtonMenus  =   2
+               BeginProperty ButtonMenu1 {66833FEE-8583-11D1-B16A-00C0F0283628} 
+                  Text            =   "Imprimir Listado"
+               EndProperty
+               BeginProperty ButtonMenu2 {66833FEE-8583-11D1-B16A-00C0F0283628} 
+                  Text            =   "Imprimir Registro"
+               EndProperty
+            EndProperty
+         EndProperty
+         BeginProperty Button14 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Style           =   3
+         EndProperty
+         BeginProperty Button15 {66833FEA-8583-11D1-B16A-00C0F0283628} 
+            Object.ToolTipText     =   "Salir"
+            ImageIndex      =   11
+         EndProperty
+      EndProperty
+      BorderStyle     =   1
+      Begin MSComctlLib.ImageList ImageList2 
+         Left            =   5535
+         Top             =   60
+         _ExtentX        =   1005
+         _ExtentY        =   1005
+         BackColor       =   -2147483637
+         ImageWidth      =   16
+         ImageHeight     =   15
+         MaskColor       =   12632256
+         _Version        =   393216
+         BeginProperty Images {2C247F25-8591-11D1-B16A-00C0F0283628} 
+            NumListImages   =   12
+            BeginProperty ListImage1 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "FrmCuentasRendir_Dev.frx":28B0
+               Key             =   "IMG1"
+            EndProperty
+            BeginProperty ListImage2 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "FrmCuentasRendir_Dev.frx":2DF4
+               Key             =   ""
+            EndProperty
+            BeginProperty ListImage3 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "FrmCuentasRendir_Dev.frx":3186
+               Key             =   "IMG2"
+            EndProperty
+            BeginProperty ListImage4 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "FrmCuentasRendir_Dev.frx":330A
+               Key             =   "IMG3"
+            EndProperty
+            BeginProperty ListImage5 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "FrmCuentasRendir_Dev.frx":375E
+               Key             =   "IMG4"
+            EndProperty
+            BeginProperty ListImage6 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "FrmCuentasRendir_Dev.frx":3876
+               Key             =   "IMG5"
+            EndProperty
+            BeginProperty ListImage7 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "FrmCuentasRendir_Dev.frx":3DBA
+               Key             =   "IMG6"
+            EndProperty
+            BeginProperty ListImage8 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "FrmCuentasRendir_Dev.frx":42FE
+               Key             =   "IMG7"
+            EndProperty
+            BeginProperty ListImage9 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "FrmCuentasRendir_Dev.frx":4412
+               Key             =   "IMG8"
+            EndProperty
+            BeginProperty ListImage10 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "FrmCuentasRendir_Dev.frx":4526
+               Key             =   "IMG9"
+            EndProperty
+            BeginProperty ListImage11 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "FrmCuentasRendir_Dev.frx":497A
+               Key             =   "IMG10"
+            EndProperty
+            BeginProperty ListImage12 {2C247F27-8591-11D1-B16A-00C0F0283628} 
+               Picture         =   "FrmCuentasRendir_Dev.frx":4AE6
+               Key             =   "IMG11"
+            EndProperty
+         EndProperty
+      End
+   End
+   Begin VB.Menu menu1 
+      Caption         =   "Menu1"
+      Visible         =   0   'False
+      Begin VB.Menu menu1_1 
+         Caption         =   "Agregar producto           "
+      End
+      Begin VB.Menu menu1_2 
+         Caption         =   "-"
+      End
+      Begin VB.Menu menu1_3 
+         Caption         =   "Eliminar producto"
+      End
+   End
+End
+Attribute VB_Name = "FrmCuentasRendir_Dev"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Explicit
+Dim QueHace As Integer
+Dim SeEjecuto As Boolean
+Dim RstFrm As New ADODB.Recordset
+Dim Agregando As Boolean
+Dim SGI_FORMAT As New SGI2_funciones.JC_VSFlexGrid
+
+
+Private Sub cb_Click()
+    Dim xCampos() As String
+    Dim N_SQL As String
+    On Error GoTo ERROR
+    
+    ReDim xCampos(10, 3) As String
+    xCampos(0, 0) = "Tipo":         xCampos(0, 1) = "tipper":       xCampos(0, 2) = "750":   xCampos(0, 3) = "C"
+    xCampos(1, 0) = "Beneficiario": xCampos(1, 1) = "benef":        xCampos(1, 2) = "3500":   xCampos(1, 3) = "C"
+    xCampos(2, 0) = "Fec.Emi":      xCampos(2, 1) = "fchemi":       xCampos(2, 2) = "820":   xCampos(2, 3) = "C"
+    xCampos(3, 0) = "Fec.Pag.":     xCampos(3, 1) = "fchpag":       xCampos(3, 2) = "820":   xCampos(3, 3) = "C"
+    xCampos(4, 0) = "Fec.Ren.":     xCampos(4, 1) = "fchren":       xCampos(4, 2) = "820":   xCampos(4, 3) = "C"
+    xCampos(5, 0) = "N° Doc":       xCampos(5, 1) = "numdoc":       xCampos(5, 2) = "1500":   xCampos(5, 3) = "C"
+    xCampos(6, 0) = "M":            xCampos(6, 1) = "simbolo":      xCampos(6, 2) = "450":   xCampos(6, 3) = "C"
+    xCampos(7, 0) = "Imp":          xCampos(7, 1) = "imp":          xCampos(7, 2) = "1000":   xCampos(7, 3) = "N"
+    xCampos(8, 0) = "Declarado":    xCampos(8, 1) = "declarado":    xCampos(8, 2) = "1000":   xCampos(8, 3) = "N"
+    xCampos(9, 0) = "x rendir":     xCampos(9, 1) = "xrendir":      xCampos(9, 2) = "1000":   xCampos(9, 3) = "N"
+    
+    N_SQL = "SELECT con_ctasrendir.id, con_ctasrendir.fchemi, con_ctasrendir.fchpag,con_ctasrendir.fchren, con_ctasrendir.numdoc, IIf(con_ctasrendir.tipmov=1,'Caja','Banco') AS tipmov, mae_moneda.simbolo, IIf(con_ctasrendir.tipmov=1,(SELECT destino.descripcion FROM con_destino AS destino WHERE (((destino.id)=con_ctasrendir.idori)) ),(SELECT [mae_bancos].[descripcion] & '  Cta. N°: ' & [con_bancocuenta].[numcue] AS origen FROM mae_bancos INNER JOIN con_bancocuenta ON mae_bancos.id = con_bancocuenta.idban WHERE (((con_bancocuenta.id)=con_ctasrendir.idori)) )) AS origen, con_origen.descripcion AS destino, mae_documento.descripcion AS tipdocnom, mae_documento.abrev, " _
+        + vbCr + " IIf(con_ctasrendir.tipper=1,'Persona','Proveedor') AS tipper, IIf(con_ctasrendir.tipper=1,(SELECT [pla_empleados].[nom] & ' ' & [pla_empleados].[ape] AS nombre FROM pla_empleados INNER JOIN con_emptes ON pla_empleados.id = con_emptes.idemp WHERE (((con_emptes.id)=con_ctasrendir.idper))),(SELECT mae_prov.nombre FROM mae_prov WHERE (((mae_prov.id)=con_ctasrendir.idper)) )) AS benef, con_ctasrendir.[imp], " _
+        + vbCr + " IIf((SELECT Sum(con_cajabancodet.impabo)  FROM con_cajabancodet WHERE con_cajabancodet.idorigen=1 GROUP BY con_cajabancodet.idren HAVING con_cajabancodet.idren=con_ctasrendir.id) Is Null,0,(SELECT Sum(con_cajabancodet.impabo)   FROM con_cajabancodet WHERE con_cajabancodet.idorigen=1 GROUP BY con_cajabancodet.idren HAVING con_cajabancodet.idren=con_ctasrendir.id )) AS declarado, (con_ctasrendir.imp-declarado) AS xrendir " _
+        + vbCr + " FROM mae_moneda RIGHT JOIN (con_origen RIGHT JOIN (mae_documento RIGHT JOIN con_ctasrendir ON mae_documento.id = con_ctasrendir.tipdoc) ON con_origen.id = con_ctasrendir.iddes) ON mae_moneda.id = con_ctasrendir.idmon " _
+        + vbCr + " WHERE con_ctasrendir.idest = 2 AND (((con_ctasrendir.[imp])>(IIf((SELECT Sum(con_cajabancodet.impabo) FROM con_cajabancodet WHERE con_cajabancodet.idorigen=1 GROUP BY con_cajabancodet.idren HAVING con_cajabancodet.idren=con_ctasrendir.id) Is Null,0,(SELECT Sum(con_cajabancodet.impabo) FROM con_cajabancodet WHERE con_cajabancodet.idorigen=1 GROUP BY con_cajabancodet.idren HAVING con_cajabancodet.idren=con_ctasrendir.id ))))) " _
+        + vbCr + " AND con_ctasrendir.id NOT IN (SELECT con_devoluciones.idren FROM con_devoluciones);"
+    Dim xForm As New eps_librerias.FormBuscar
+    Dim xRs As New ADODB.Recordset
+
+    Me.MousePointer = vbHourglass
+    xForm.Titulo = "Buscando Documentos x Rendir"
+    xForm.FormaBusca = Principio
+    xForm.Criterio = ""
+    xForm.Ordenado = "benef"
+    xForm.CampoBusca = "benef"
+    xForm.SQLCad = N_SQL
+    Set xForm.Coneccion = xCon
+    Set xRs = xForm.BuscarReg(xCampos)
+    If xRs.State = 1 Then
+        '----------
+        LimpiaText txtfecha
+        LimpiaText lbl_dato, True
+        LimpiaText txt_total, True
+        Set Me.Dg1.DataSource = Nothing
+        txtfecha(0).Valor = ""
+        txt(1).Text = ""
+        txt(2).Text = ""
+        '------------
+    
+        PONER_DATOS_CTA_RENDIR xRs
+        PONER_DATOS_CAJA_BANCO
+        
+    End If
+    Set xForm = Nothing
+    Set xRs = Nothing
+    Me.MousePointer = vbDefault
+Exit Sub
+ERROR:
+    Me.MousePointer = vbDefault
+    Set xForm = Nothing
+    Set xRs = Nothing
+    SHOW_ERROR
+End Sub
+
+Private Sub Dg3_DblClick()
+    TabOne1.CurrTab = 1
+End Sub
+
+Private Sub Form_Activate()
+    If SeEjecuto = True Then Exit Sub
+    Dim Rpta As Integer
+
+    
+    SeEjecuto = False
+    CARGAR_GRID Month(Date)
+    SeEjecuto = True
+    If RstFrm.RecordCount = 0 Then
+        Rpta = MsgBox("No se ha registrado ninguna cuenta por rendir, ¿Desea agergar uno ahora?", vbQuestion + vbYesNo + vbDefaultButton1, xTitulo)
+        If Rpta = vbYes Then
+            Nuevo
+        Else
+            Set RstFrm = Nothing
+            Unload Me
+            Exit Sub
+        End If
+    End If
+End Sub
+
+Private Sub CARGAR_GRID(M_MONTH As Integer)
+
+    Dim xSQL  As String
+    Dim M_ANYO As String
+    M_ANYO = Year(Date)
+
+    xSQL = "SELECT con_devoluciones.id AS dev_id, con_devoluciones.fchemi AS dev_emi, con_devoluciones.[imp] AS dev_imp, con_devoluciones.obs AS dev_obs, " _
+        + vbCr + " IIf((SELECT Sum(con_cajabancodet.impabo)  FROM con_cajabancodet WHERE con_cajabancodet.idorigen=1 GROUP BY con_cajabancodet.idren HAVING con_cajabancodet.idren=con_ctasrendir.id) Is Null,0,(SELECT Sum(con_cajabancodet.impabo)   FROM con_cajabancodet WHERE con_cajabancodet.idorigen=1 GROUP BY con_cajabancodet.idren HAVING con_cajabancodet.idren=con_ctasrendir.id )) AS declarado, " _
+        + vbCr + " (con_ctasrendir.imp -  (declarado+con_devoluciones.imp)) AS xrendir, " _
+        + vbCr + " con_ctasrendir.id, con_ctasrendir.fchemi, con_ctasrendir.fchpag,con_ctasrendir.fchren, con_ctasrendir.numdoc, IIf(con_ctasrendir.tipmov=1,'Caja','Banco') AS tipmov, mae_moneda.simbolo, IIf(con_ctasrendir.tipmov=1,(SELECT destino.descripcion FROM con_destino AS destino WHERE (((destino.id)=con_ctasrendir.idori)) ),(SELECT [mae_bancos].[descripcion] & '  Cta. N°: ' & [con_bancocuenta].[numcue] AS origen FROM mae_bancos INNER JOIN con_bancocuenta ON mae_bancos.id = con_bancocuenta.idban WHERE (((con_bancocuenta.id)=con_ctasrendir.idori)) )) AS origen, con_origen.descripcion AS destino, mae_documento.descripcion AS tipdocnom, mae_documento.abrev, " _
+        + vbCr + " IIf(con_ctasrendir.tipper=1,'Persona','Proveedor') AS tipper, IIf(con_ctasrendir.tipper=1,(SELECT [pla_empleados].[nom] & ' ' & [pla_empleados].[ape] AS nombre FROM pla_empleados INNER JOIN con_emptes ON pla_empleados.id = con_emptes.idemp WHERE (((con_emptes.id)=con_ctasrendir.idper))),(SELECT mae_prov.nombre FROM mae_prov WHERE (((mae_prov.id)=con_ctasrendir.idper)) )) AS benef, con_ctasrendir.[imp] " _
+        + vbCr + " FROM (mae_moneda RIGHT JOIN (con_origen RIGHT JOIN (mae_documento RIGHT JOIN con_ctasrendir ON mae_documento.id = con_ctasrendir.tipdoc) ON con_origen.id = con_ctasrendir.iddes) ON mae_moneda.id = con_ctasrendir.idmon) LEFT JOIN con_devoluciones ON con_ctasrendir.id = con_devoluciones.idren " _
+        + vbCr + " WHERE YEAR(con_devoluciones.fchemi)= " + M_ANYO + " AND MONTH(con_devoluciones.fchemi)=" + CStr(M_MONTH) + "" _
+        + vbCr + " ORDER BY con_devoluciones.fchemi;"
+        
+    '--CARGANDO_DATOS
+    Me.MousePointer = vbHourglass
+    RST_Busq RstFrm, xSQL, xCon
+    
+    Set Dg3.DataSource = RstFrm
+    Me.MousePointer = vbDefault
+End Sub
+
+
+Private Sub Form_Load()
+    SeEjecuto = False
+    Agregando = False
+    QueHace = 3
+    '--DE LA CUENTA X RENDIR
+    Dg3.Columns("dev_emi").NumberFormat = FORMAT_DATE
+    Dg3.Columns("fchemi").NumberFormat = FORMAT_DATE
+    Dg3.Columns("fchpag").NumberFormat = FORMAT_DATE
+    Dg3.Columns("fchren").NumberFormat = FORMAT_DATE
+    Dg3.Columns("imp").NumberFormat = FORMAT_MONTO
+    '--DE LA RENDICION
+    Dg3.Columns("dev_imp").NumberFormat = FORMAT_MONTO
+    Dg3.Columns("Declarado").NumberFormat = FORMAT_MONTO
+    Dg3.Columns("xrendir").NumberFormat = FORMAT_MONTO
+    '--DE LO DECLARADO
+    Dg1.Columns("importe").NumberFormat = FORMAT_MONTO
+    
+    Dg3.BatchUpdates = False
+    'Fg2.SelectionMode = flexSelectionByRow
+    TabOne1.CurrTab = 0
+    Frame1.BackColor = &H8000000F
+    Frame2.BackColor = &H8000000F
+    '--
+    Habilitar_Obj False
+    Dg3.Splits(0).SizeMode = dbgExact
+    Dg3.Splits(0).Size = 4995.213
+    Dg3.Splits(1).Size = 12000
+    
+End Sub
+
+Private Sub Form_Unload(Cancel As Integer)
+    If QueHace <> 3 Then
+        MsgBox "No puede cerrar este formulario mientras este agregando o modificando datos", vbInformation, xTitulo
+        Cancel = 1
+        Exit Sub
+    End If
+    Set SGI_FORMAT = Nothing
+    Set Dg3.DataSource = Nothing
+End Sub
+
+
+Private Sub TabOne1_Switch(OldTab As Integer, NewTab As Integer, Cancel As Integer)
+    If OldTab = 0 Then
+        If QueHace = 3 Then MuestraSegundoTab
+    End If
+End Sub
+
+
+
+Private Sub Toolbar1_ButtonClick(ByVal Button As MSComctlLib.Button)
+    If Button.Index = 1 Then Nuevo
+    If Button.Index = 2 Then Modificar
+    If Button.Index = 3 Then Eliminar
+    
+    If Button.Index = 5 Then
+        If Grabar = True Then
+            Cancelar
+            RstFrm.Requery
+            Dg3.Refresh
+        End If
+    End If
+    
+    If Button.Index = 6 Then Cancelar
+    
+''    If Button.Index = 11 Then Imprimir
+    If Button.Index = 10 Then CambiarMes
+    
+    If Button.Index = 15 Then
+        Set RstFrm = Nothing
+        Unload Me
+    End If
+End Sub
+
+Sub Eliminar()
+    
+    
+    Dim Rpta As Integer
+    
+    Rpta = MsgBox("¿Esta seguro de eliminar el registro?", vbQuestion, xTitulo)
+    If Rpta = vbYes Then
+        xCon.Execute "DELETe * FROM con_devoluciones WHERE id = " & RstFrm("id") & ""
+        MsgBox "El registro fue eliminado con éxito", vbInformation, xTitulo
+        RstFrm.Requery
+        Dg3.Refresh
+        If RstFrm.RecordCount = 0 Then
+            Rpta = MsgBox("No hay registrado ningún programa, ¿Desea agregar uno ahora?", vbQuestion + vbYesNo, xTitulo)
+            If Rpta = vbYes Then
+                Nuevo
+            Else
+                Set RstFrm = Nothing
+                Unload Me
+                Exit Sub
+            End If
+        End If
+    End If
+End Sub
+
+Sub Cancelar()
+    QueHace = 3
+    TabOne1.TabEnabled(0) = True
+    ActivaTool
+    Habilitar_Obj False
+    Label1.Caption = "Detalle de Devolución de Cuentas por Rendir"
+    TabOne1.CurrTab = 0
+    TabOne2.CurrTab = 0
+    Dg3.SetFocus
+End Sub
+
+Private Sub Modificar()
+   '------
+    
+    QueHace = 2
+    TabOne1.CurrTab = 1
+    TabOne1.TabEnabled(0) = False
+    ActivaTool
+    Habilitar_Obj True
+    MuestraSegundoTab
+   
+    Label1.Caption = "Modificando Cuentas por Rendir"
+    
+    txtfecha(0).SetFocus
+End Sub
+
+Sub MuestraSegundoTab()
+    On Error GoTo ERROR
+    With RstFrm
+        If .State = 0 Then Exit Sub
+        If .EOF = True Or .BOF = True Then Exit Sub
+        
+        txt(0).Text = .Fields("dev_id") & "" '--CODIGO
+        txtfecha(0).Valor = .Fields("dev_emi")  '--FECHA DE EMISION
+        txt(1).Text = Format(NulosN(.Fields("dev_imp")), SGI_FORMAT.FORMAT_MONTO)
+        txt(2).Text = .Fields("dev_obs") & ""
+        '---
+        PONER_DATOS_CTA_RENDIR RstFrm
+        PONER_DATOS_CAJA_BANCO
+        
+    End With
+    
+    Exit Sub
+ERROR:
+    
+    SHOW_ERROR
+End Sub
+
+Private Sub Habilitar_Obj(band As Boolean)
+    habilitar_Locked txtfecha, Not band
+    habilitar_Locked txt, Not band
+    txt_cb(0).Locked = Not band
+    cb.Enabled = band
+    
+End Sub
+
+Private Sub Blanquea()
+    LimpiaText txtfecha
+    LimpiaText txt
+    LimpiaText lbl_dato, True
+    LimpiaText txt_total, True
+    Set Me.Dg1.DataSource = Nothing
+    
+    txt_cb(0).Text = ""
+    
+End Sub
+
+Private Sub ActivaTool()
+    Toolbar1.Buttons(1).Enabled = Not Toolbar1.Buttons(1).Enabled
+    Toolbar1.Buttons(2).Enabled = Not Toolbar1.Buttons(2).Enabled
+    Toolbar1.Buttons(3).Enabled = Not Toolbar1.Buttons(3).Enabled
+    
+    Toolbar1.Buttons(5).Enabled = Not Toolbar1.Buttons(5).Enabled
+    Toolbar1.Buttons(6).Enabled = Not Toolbar1.Buttons(6).Enabled
+    
+    Toolbar1.Buttons(8).Enabled = Not Toolbar1.Buttons(8).Enabled
+    Toolbar1.Buttons(9).Enabled = Not Toolbar1.Buttons(9).Enabled
+    Toolbar1.Buttons(10).Enabled = Not Toolbar1.Buttons(10).Enabled
+    
+    Toolbar1.Buttons(12).Enabled = Not Toolbar1.Buttons(12).Enabled
+    Toolbar1.Buttons(14).Enabled = Not Toolbar1.Buttons(14).Enabled
+    
+End Sub
+
+Private Sub Nuevo()
+    QueHace = 1
+    TabOne1.CurrTab = 1
+    TabOne1.TabEnabled(0) = False
+    ActivaTool
+    Blanquea
+    Habilitar_Obj True
+    Label1.Caption = "Programando Devolución de Cuentas por Rendir"
+    TabOne2.CurrTab = 0
+    txtfecha(0).SetFocus
+End Sub
+
+Function Grabar() As Boolean
+   If VALIDAR_DATOS() = False Then Exit Function
+    
+    If MsgBox("Seguro desea " + IIf(QueHace = 1, "grabar", "Modificar") + " el registro", vbQuestion + vbYesNo, xTitulo) = vbNo Then GoTo SALIR
+    
+    
+    Dim RstCab As New ADODB.Recordset
+    Dim xCod As Integer
+    
+    'On Error GoTo LaCague
+
+    xCon.BeginTrans
+    
+    If QueHace = 1 Then
+        RST_Busq RstCab, "SELECT top 1 * FROM con_devoluciones ", xCon
+        xCod = HallaCodigoTabla("con_devoluciones", xCon, "id")
+        RstCab.AddNew
+        RstCab("id") = xCod
+        txt(0).Text = xCod
+    Else
+        RST_Busq RstCab, "SELECT * FROM con_devoluciones WHERE id =" & RstFrm("dev_id") & "", xCon
+        xCod = RstFrm("id")
+    End If
+    
+    RstCab("fchemi") = CDate(txtfecha(0).Valor)
+    RstCab("idren") = lbl_dato(0).Caption
+    RstCab("imp") = Val(Trim(txt(1).Text)) '--IMPORTE
+    RstCab("obs") = Trim(txt(2).Text)
+
+    RstCab.Update
+    
+    MsgBox "El registro se " + IIf(QueHace = 1, "grabó", "modificó") + " con éxito", vbInformation, xTitulo
+    xCon.CommitTrans
+    Grabar = True
+SALIR:
+    Set RstCab = Nothing
+    Exit Function
+    
+LaCague:
+    xCon.RollbackTrans
+    Set RstCab = Nothing
+    MsgBox "No se pudo guardar el registro por el siguiente motivo :" + Trim(Err.Description), vbCritical, xTitulo
+    Grabar = False
+    Exit Function
+End Function
+
+Private Function VALIDAR_DATOS() As Boolean
+    If IsDate(txtfecha(0).Valor) = False Then
+        MsgBox "No ha especificado la fecha de emisión", vbInformation, xTitulo
+        txtfecha(0).SetFocus
+        Exit Function
+    End If
+
+    If lbl_dato(0).Caption = "" Then
+        MsgBox "Seleccione una cuenta por rendir", vbInformation, xTitulo
+        txt_cb(0).SetFocus
+        Exit Function
+    End If
+    
+    If IsNumeric(Trim(txt(1).Text)) = False Then
+        MsgBox "El importe a devolver no es correcto", vbExclamation, xTitulo
+        txt(1).Text = ""
+        Exit Function
+    End If
+    If IsDate(lbl_dato(1).Caption) = True Then
+        If CDate(txtfecha(0).Valor) < CDate(lbl_dato(1).Caption) Then
+            MsgBox "La fecha de Devoluciòn es inferior a la fecha de emisión de la Cuenta" + vbCr + "Modifique la fecha", vbInformation, xTitulo
+            txtfecha(0).SetFocus
+            Exit Function
+        End If
+    End If
+    
+    
+    If QueHace = 1 Then
+        If Val(txt_total(2).Text) > Val(Trim(txt(1).Text)) Then
+            If MsgBox("El monto a devolver es inferior al monto por rendir" + vbCr + "Diferencia: " + Format(Val(txt_total(2).Text) - Val(Trim(txt(1).Text)), SGI_FORMAT.FORMAT_MONTO) + vbCr + "Desea Continuar", vbQuestion + vbYesNo, xTitulo) = vbNo Then Exit Function
+        ElseIf Val(txt_total(2).Text) < Val(Trim(txt(1).Text)) Then
+            If MsgBox("El monto a devolver es  superior al monto por rendir" + vbCr + "Diferencia: " + Format(Val(txt_total(2).Text) - Val(Trim(txt(1).Text)), SGI_FORMAT.FORMAT_MONTO) + vbCr + "Desea Continuar", vbQuestion + vbYesNo, xTitulo) = vbNo Then Exit Function
+        End If
+    End If
+    
+    VALIDAR_DATOS = True
+End Function
+ 
+
+Private Sub txt_cb_Change(Index As Integer)
+If txt_cb(0).Text = "" Then Me.lbl_dato(0).Caption = ""
+End Sub
+
+Private Sub txt_cb_KeyDown(Index As Integer, KeyCode As Integer, Shift As Integer)
+    If txt_cb(Index).Locked = True Then Exit Sub
+    If KeyCode = vbKeyF5 Then
+        cb_Click
+        Exit Sub
+    End If
+
+    If txt_cb(Index).Text = "" Then Exit Sub
+    If KeyCode <> 13 Then Exit Sub
+    On Error GoTo ERROR
+    Dim RST_TMP As New ADODB.Recordset
+    Dim N_SQL As String
+
+    N_SQL = "SELECT con_ctasrendir.id, con_ctasrendir.fchemi, con_ctasrendir.fchpag,con_ctasrendir.fchren, con_ctasrendir.numdoc, IIf(con_ctasrendir.tipmov=1,'Caja','Banco') AS tipmov, mae_moneda.simbolo, IIf(con_ctasrendir.tipmov=1,(SELECT destino.descripcion FROM con_destino AS destino WHERE (((destino.id)=con_ctasrendir.idori)) ),(SELECT [mae_bancos].[descripcion] & '  Cta. N°: ' & [con_bancocuenta].[numcue] AS origen FROM mae_bancos INNER JOIN con_bancocuenta ON mae_bancos.id = con_bancocuenta.idban WHERE (((con_bancocuenta.id)=con_ctasrendir.idori)) )) AS origen, con_origen.descripcion AS destino, mae_documento.descripcion AS tipdocnom, mae_documento.abrev, " _
+        + vbCr + " IIf(con_ctasrendir.tipper=1,'Persona','Proveedor') AS tipper, IIf(con_ctasrendir.tipper=1,(SELECT [pla_empleados].[nom] & ' ' & [pla_empleados].[ape] AS nombre FROM pla_empleados INNER JOIN con_emptes ON pla_empleados.id = con_emptes.idemp WHERE (((con_emptes.id)=con_ctasrendir.idper))),(SELECT mae_prov.nombre FROM mae_prov WHERE (((mae_prov.id)=con_ctasrendir.idper)) )) AS benef, con_ctasrendir.[imp], " _
+        + vbCr + " IIf((SELECT Sum(con_cajabancodet.impabo)  FROM con_cajabancodet WHERE con_cajabancodet.idorigen=1 GROUP BY con_cajabancodet.idren HAVING con_cajabancodet.idren=con_ctasrendir.id) Is Null,0,(SELECT Sum(con_cajabancodet.impabo)   FROM con_cajabancodet WHERE con_cajabancodet.idorigen=1 GROUP BY con_cajabancodet.idren HAVING con_cajabancodet.idren=con_ctasrendir.id )) AS declarado, (con_ctasrendir.imp-declarado) AS xrendir " _
+        + vbCr + " FROM mae_moneda RIGHT JOIN (con_origen RIGHT JOIN (mae_documento RIGHT JOIN con_ctasrendir ON mae_documento.id = con_ctasrendir.tipdoc) ON con_origen.id = con_ctasrendir.iddes) ON mae_moneda.id = con_ctasrendir.idmon " _
+        + vbCr + " WHERE con_ctasrendir.idest = 2 AND (((con_ctasrendir.[imp])>(IIf((SELECT Sum(con_cajabancodet.impabo) FROM con_cajabancodet WHERE con_cajabancodet.idorigen=1 GROUP BY con_cajabancodet.idren HAVING con_cajabancodet.idren=con_ctasrendir.id) Is Null,0,(SELECT Sum(con_cajabancodet.impabo) FROM con_cajabancodet WHERE con_cajabancodet.idorigen=1 GROUP BY con_cajabancodet.idren HAVING con_cajabancodet.idren=con_ctasrendir.id ))))) " _
+        + vbCr + " AND con_ctasrendir.id =" + CStr(txt_cb(0).Text) + " " _
+        + vbCr + " AND con_ctasrendir.id NOT IN (SELECT con_devoluciones.idren FROM con_devoluciones);"
+
+    Me.MousePointer = vbHourglass
+    If xCon.State = 0 Then GoTo SALIR
+    RST_Busq RST_TMP, N_SQL, xCon
+    
+    If RST_TMP.State = 0 Then GoTo SALIR
+    If RST_TMP.RecordCount > 0 Then
+        '----------
+        LimpiaText txtfecha
+        LimpiaText lbl_dato, True
+        LimpiaText txt_total, True
+        Set Me.Dg1.DataSource = Nothing
+        txtfecha(0).Valor = ""
+        txt(1).Text = ""
+        txt(2).Text = ""
+        '------------
+        PONER_DATOS_CTA_RENDIR RST_TMP
+        PONER_DATOS_CAJA_BANCO
+    Else
+        txt_cb(Index).Text = ""
+    End If
+            
+SALIR:
+    Set RST_TMP = Nothing
+    Me.MousePointer = vbDefault
+    Exit Sub
+ERROR:
+    Me.MousePointer = vbDefault
+    Set RST_TMP = Nothing
+    SHOW_ERROR
+End Sub
+
+Private Sub txt_cb_KeyPress(Index As Integer, KeyAscii As Integer)
+    If KeyAscii = 13 Then
+        SendKeys vbTab
+        Exit Sub
+    End If
+    If validar_numero(KeyAscii) = False Then KeyAscii = 0
+End Sub
+
+Private Sub txt_KeyPress(Index As Integer, KeyAscii As Integer)
+    If KeyAscii = 13 Then
+        SendKeys vbTab
+        Exit Sub
+    End If
+    Select Case Index
+        Case 2:
+            If validar_numero(KeyAscii) = False Then KeyAscii = 0
+    End Select
+End Sub
+
+
+Private Function VERIFICAR_PROG_AUT(BUSCAPROGRAMADOR As Boolean, OBJ_ID As Label, OBJ_NOMBRE As Label) As Boolean
+    Dim RST_TMP As New ADODB.Recordset
+    Dim N_SQL As String
+    Dim N_SQL_PROG As String
+    If BUSCAPROGRAMADOR = True Then
+        N_SQL_PROG = " AND con_emptes.prog=-1;"
+    Else
+        N_SQL_PROG = " AND con_emptes.aut=-1;"
+    End If
+    
+    N_SQL = "SELECT  con_emptes.id, [pla_empleados].[nom] & ' ' & [pla_empleados].[ape] AS nombre " _
+    + vbCr + " FROM (pla_empleados INNER JOIN mae_usuarios ON pla_empleados.id = mae_usuarios.id) INNER JOIN con_emptes ON pla_empleados.id = con_emptes.idemp " _
+    + vbCr + " WHERE mae_usuarios.id= " + CStr(xIdUsuario) + N_SQL_PROG
+    
+    
+    RST_Busq RST_TMP, N_SQL, xCon
+    If RST_TMP.State = 0 Then GoTo SALIR
+    If RST_TMP.EOF = True Or RST_TMP.BOF = True Then
+        OBJ_ID.Caption = "0"
+        OBJ_NOMBRE.Caption = "NO ES " + IIf(BUSCAPROGRAMADOR = True, "PROGRAMADOR", "AUTORIZADOR")
+    Else
+        OBJ_ID.Caption = RST_TMP.Fields(0) & ""
+        OBJ_NOMBRE.Caption = IIf(BUSCAPROGRAMADOR = True, "PROGRAMADOR", "AUTORIZADOR") + ":  " + RST_TMP.Fields(1) & ""
+        VERIFICAR_PROG_AUT = True
+    End If
+SALIR:
+    Set RST_TMP = Nothing
+End Function
+
+
+
+Private Sub PONER_DATOS_CTA_RENDIR(Rst As ADODB.Recordset)
+'    On Error GoTo ERROR
+    With Rst
+        If .State = 0 Then Exit Sub
+        If .EOF = True Or .BOF = True Then Exit Sub
+        txt_cb(0).Text = .Fields("id") & "" '--CODIGO
+        lbl_dato(0).Caption = .Fields("id") & ""  '--CODIGO
+        
+        lbl_dato(1).Caption = .Fields("fchemi") & "" '--FECHA DE EMISION
+        lbl_dato(2).Caption = .Fields("fchpag") & "" '--FECHA DE PAGO
+        lbl_dato(10).Caption = .Fields("fchren") & "" '--FECHA DE PAGO
+        
+        '--DEL TIPO DE DOCUMENTO
+        Me.lbl_dato(3).Caption = .Fields("tipdocnom") & "" '--DESCRIPCION DEL TIPO DOC
+        '--DE LA MONEDA
+        Me.lbl_dato(4).Caption = .Fields("simbolo") & "" '--CODIGO DE LA MONEDA
+        
+        lbl_dato(5).Caption = .Fields("numdoc") & ""
+        lbl_dato(6).Caption = Format(NulosN(.Fields("imp")), FORMAT_MONTO)
+        '--DEL ORIGEN
+        lbl_dato_x(7).Caption = .Fields("tipmov") & "" '--TIPO DE MOVIENTO
+        lbl_dato(7).Caption = .Fields("origen") & ""
+        '--DEL DESTINO
+        Me.lbl_dato(8).Caption = .Fields("destino") & ""
+        '--DEL BENEFICIARIO
+        lbl_dato_x(9).Caption = .Fields("tipper") & ""
+        lbl_dato(9).Caption = .Fields("benef") & "" '--NOMBRE DE LA PERSONA,NOMBRE DEL PROVEEDOR
+        
+        '--DE LOS TOTALES
+        txt_total(0).Text = Format(NulosN(.Fields("imp")), SGI_FORMAT.FORMAT_MONTO)
+        txt_total(1).Text = Format(NulosN(.Fields("declarado")), SGI_FORMAT.FORMAT_MONTO)
+        txt_total(2).Text = Format(NulosN(.Fields("xrendir")), SGI_FORMAT.FORMAT_MONTO)
+        
+        End With
+    Exit Sub
+ERROR:
+    SHOW_ERROR
+
+End Sub
+
+Private Sub PONER_DATOS_CAJA_BANCO()
+        
+        Dim RST_TMP As New ADODB.Recordset
+        Dim X_SQL As String
+        Dim SUMA
+        X_SQL = "SELECT com_compras.numreg, com_compras!numser & ' ' & com_compras!numdoc AS numcompra, con_cajabanco.fchope, con_cajabanco.numdoc AS numope, mae_moneda.simbolo, con_cajabancodet.impabo AS importe, con_cajabancodet.idren " _
+            + vbCr + " FROM mae_moneda INNER JOIN (con_cajabanco INNER JOIN (com_compras INNER JOIN con_cajabancodet ON com_compras.id = con_cajabancodet.iddoc) ON con_cajabanco.id = con_cajabancodet.id) ON mae_moneda.id = con_cajabanco.idmon " _
+            + vbCr + " WHERE (((con_cajabancodet.idorigen)=1) AND ((con_cajabancodet.idren)=" + lbl_dato(0).Caption + "));"
+        RST_Busq RST_TMP, X_SQL, xCon
+        Set Dg1.DataSource = RST_TMP
+        
+End Sub
+
+'------DEL CAMBIO DE PERIODO
+
+Sub CambiarMes()
+    Dim xMes  As Integer
+    xMes = SeleccionaMes(xCon)
+    If xMes = 0 Or xMes = 13 Then Exit Sub
+    CARGAR_GRID xMes
+End Sub
+
+

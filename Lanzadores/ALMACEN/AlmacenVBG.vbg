@@ -1,0 +1,4 @@
+VBGROUP 5.0
+StartupProject=Proyecto1.vbp
+Project=..\..\Fuentes\almacen\SGI2_almacen.vbp
+Project=..\..\Fuentes\AlmacenEntidad\AlmacenEntidad.vbp

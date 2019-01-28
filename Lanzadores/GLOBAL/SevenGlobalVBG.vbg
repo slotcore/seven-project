@@ -1,0 +1,15 @@
+VBGROUP 5.0
+Project=..\..\Fuentes\almacen\SGI2_almacen.vbp
+Project=..\..\Fuentes\SistemaData\SistemaData.vbp
+Project=..\..\Fuentes\SistemaLogica\SistemaLogica.vbp
+Project=..\..\Fuentes\AlmacenEntidad\AlmacenEntidad.vbp
+Project=..\..\Fuentes\SistemaEntidad\SistemaEntidad.vbp
+Project=..\..\Fuentes\Compras\sgi2_compras.vbp
+Project=..\..\Fuentes\ComprasEntidad\ComprasEntidad.vbp
+Project=..\..\Fuentes\Contabilidad\sgi2_contabilidad.vbp
+Project=..\..\Fuentes\ContabilidadEntidad\ContabilidadEntidad.vbp
+Project=..\..\Fuentes\ContabilidadLogica\ContabilidadLogica.vbp
+Project=..\..\Fuentes\Produccion\sgi2_produccion.vbp
+Project=..\..\Fuentes\ProduccionEntidad\ProduccionEntidad.vbp
+Project=..\..\Fuentes\ProduccionLogica\ProduccionLogica.vbp
+Project=..\..\Fuentes\Ventas\sgi2_ventas.vbp

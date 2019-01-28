@@ -1,0 +1,12 @@
+[History]
+1=#P0#=mb	#P1#=aplicarCambios	#P2#=sgi2_produccion/FrmCronoProduccion2_3_1/aplicarCambios	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140301200658	#P7#=0	#P8#=263	.
+2=#P0#=mb	#P1#=grabarOrdProd	#P2#=sgi2_produccion/Declaraciones/grabarOrdProd	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140301200205	#P7#=0	#P8#=13	.
+3=#P0#=mb	#P1#=CronogramaProduccion	#P2#=sgi2_produccion/produccion/CronogramaProduccion	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140301141458	#P7#=0	#P8#=4	.
+4=#P0#=mb	#P1#=iniciarCampos	#P2#=sgi2_produccion/FrmManSolMat/iniciarCampos	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140301141057	#P7#=0	#P8#=13	.
+5=#P0#=mb	#P1#=imprimir	#P2#=sgi2_produccion/FrmManSolMat/imprimir	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140227232924	#P7#=0	#P8#=23	.
+6=#P0#=mb	#P1#=cmd_Click	#P2#=sgi2_produccion/FrmManSolMat/cmd_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140227232620	#P7#=0	#P8#=207	.
+7=#P0#=mb	#P1#=fg_KeyPressEdit	#P2#=sgi2_produccion/FrmManOrdProd/fg_KeyPressEdit	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140227230231	#P7#=0	#P8#=20	.
+8=#P0#=mb	#P1#=fg_BeforeEdit	#P2#=sgi2_produccion/FrmManOrdProd/fg_BeforeEdit	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140227230150	#P7#=0	#P8#=1	.
+9=#P0#=mb	#P1#=iniciarCampos	#P2#=sgi2_produccion/FrmManOrdProd/iniciarCampos	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140227230031	#P7#=0	#P8#=52	.
+10=#P0#=mb	#P1#=cmd_Click	#P2#=sgi2_produccion/FrmManOrdProd/cmd_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140227225619	#P7#=0	#P8#=55	.
+11=#P0#=mb	#P1#=Muestradatos	#P2#=sgi2_produccion/FrmManReceta2/Muestradatos	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140227222302	#P7#=0	#P8#=6	.

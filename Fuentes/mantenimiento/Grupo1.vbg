@@ -1,0 +1,4 @@
+VBGROUP 5.0
+Project=sgi2_mantenimiento.vbp
+StartupProject=..\..\directo.vbp
+Project=..\Produccion\sgi2_produccion.vbp

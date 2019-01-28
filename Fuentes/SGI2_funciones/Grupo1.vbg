@@ -1,0 +1,4 @@
+VBGROUP 5.0
+Project=..\Compras\sgi2_compras.vbp
+StartupProject=..\..\SevenVBP.vbp
+Project=SGI2_funciones.vbp

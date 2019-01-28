@@ -1,0 +1,8 @@
+[History]
+1=#P0#=mb	#P1#=hallarNumProd	#P2#=sgi2_contabilidad/FrmVerKardex/hallarNumProd	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140301135054	#P7#=0	#P8#=5	.
+2=#P0#=mb	#P1#=Cargar	#P2#=sgi2_contabilidad/FrmResuMov/Cargar	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140301134542	#P7#=0	#P8#=113	.
+3=#P0#=mb	#P1#=MuestraKardexProm	#P2#=sgi2_contabilidad/FrmVerKardex/MuestraKardexProm	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140301133759	#P7#=0	#P8#=186	.
+4=#P0#=mb	#P1#=KardexMovimientoSQL	#P2#=sgi2_contabilidad/Declaraciones/KardexMovimientoSQL	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140301132413	#P7#=0	#P8#=60	.
+5=#P0#=mb	#P1#=Form_Activate	#P2#=sgi2_contabilidad/FrmVerKardex/Form_Activate	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140301131653	#P7#=0	#P8#=29	.
+6=#P0#=mb	#P1#=Command1_Click	#P2#=sgi2_contabilidad/FrmResuMov/Command1_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140301131535	#P7#=0	#P8#=1	.
+7=#P0#=mb	#P1#=Fg1_DblClick	#P2#=sgi2_contabilidad/FrmResuMov/Fg1_DblClick	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140301131524	#P7#=0	#P8#=0	.

@@ -1,0 +1,37 @@
+Type=Exe
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#C:\WINDOWS\SYSTEM32\STDOLE2.TLB#OLE Automation
+Reference=*\G{CA3EBF13-7C4F-11D8-885D-A22893639626}#3.0#0#..\..\LIBRERIAS25\EPS_DATAACCES\EPS_DATAACCES.DLL#Eps_DataAcces
+Reference=*\G{9765C5CF-3242-11D9-8862-ADFDAD001B23}#1.0#0#..\..\LIBRERIAS25\EPS_EXPORTA\EPS_EXPORTA.DLL#Eps_Exporta
+Reference=*\G{6238CE4D-3005-11D9-8862-9B977F9CEC39}#3.1#0#..\..\Librerias25\Eps_Funciones\EPS_funciones.dll#EPS_funciones
+Reference=*\G{8286F6FE-0719-11D9-8861-E3F6D9278D12}#2.0#0#..\..\Librerias25\Visores\EPS_Visores.dll#EPS_Visores
+Reference=*\G{00000205-0000-0010-8000-00AA006D2EA4}#2.5#0#C:\Archivos de programa\Archivos comunes\system\ado\msado25.tlb#Microsoft ActiveX Data Objects 2.5 Library
+Form=Form1.frm
+Startup="Form1"
+Command32=""
+Name="Proyecto1"
+HelpContextID="0"
+CompatibleMode="0"
+MajorVer=1
+MinorVer=0
+RevisionVer=0
+AutoIncrementVer=0
+ServerSupportFiles=0
+VersionCompanyName="EPS S.R.Ltda."
+CompilationType=0
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=0
+NoAliasing=0
+BoundsCheck=0
+OverflowCheck=0
+FlPointCheck=0
+FDIVCheck=0
+UnroundedFP=0
+StartMode=0
+Unattended=0
+Retained=0
+ThreadPerObject=0
+MaxNumberOfThreads=1
+
+[MS Transaction Server]
+AutoRefresh=1

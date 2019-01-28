@@ -1,0 +1,522 @@
+VERSION 5.00
+Object = "{A8561640-E93C-11D3-AC3B-CE6078F7B616}#1.0#0"; "VSPRINT7.OCX"
+Begin VB.Form FrmPrintIngEgreso 
+   Caption         =   "Reporte de ingresos y Egresos de Almacén"
+   ClientHeight    =   6900
+   ClientLeft      =   60
+   ClientTop       =   345
+   ClientWidth     =   11535
+   LinkTopic       =   "Form1"
+   ScaleHeight     =   6900
+   ScaleWidth      =   11535
+   StartUpPosition =   3  'Windows Default
+   WindowState     =   2  'Maximized
+   Begin VSPrinter7LibCtl.VSPrinter Vp 
+      Height          =   6375
+      Left            =   120
+      TabIndex        =   0
+      Top             =   1080
+      Width           =   11055
+      _cx             =   19500
+      _cy             =   11245
+      Appearance      =   1
+      BorderStyle     =   1
+      Enabled         =   -1  'True
+      MousePointer    =   0
+      BackColor       =   -2147483643
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Arial"
+         Size            =   11.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      BeginProperty HdrFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Courier New"
+         Size            =   14.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      _ConvInfo       =   1
+      AutoRTF         =   -1  'True
+      Preview         =   -1  'True
+      DefaultDevice   =   0   'False
+      PhysicalPage    =   -1  'True
+      AbortWindow     =   -1  'True
+      AbortWindowPos  =   0
+      AbortCaption    =   "Printing..."
+      AbortTextButton =   "Cancel"
+      AbortTextDevice =   "on the %s on %s"
+      AbortTextPage   =   "Now printing Page %d of"
+      FileName        =   ""
+      MarginLeft      =   1440
+      MarginTop       =   1440
+      MarginRight     =   1440
+      MarginBottom    =   1440
+      MarginHeader    =   0
+      MarginFooter    =   0
+      IndentLeft      =   0
+      IndentRight     =   0
+      IndentFirst     =   0
+      IndentTab       =   720
+      SpaceBefore     =   0
+      SpaceAfter      =   0
+      LineSpacing     =   100
+      Columns         =   1
+      ColumnSpacing   =   180
+      ShowGuides      =   2
+      LargeChangeHorz =   300
+      LargeChangeVert =   300
+      SmallChangeHorz =   30
+      SmallChangeVert =   30
+      Track           =   0   'False
+      ProportionalBars=   -1  'True
+      Zoom            =   35.1325757575758
+      ZoomMode        =   3
+      ZoomMax         =   400
+      ZoomMin         =   10
+      ZoomStep        =   25
+      EmptyColor      =   -2147483636
+      TextColor       =   0
+      HdrColor        =   0
+      BrushColor      =   0
+      BrushStyle      =   0
+      PenColor        =   0
+      PenStyle        =   0
+      PenWidth        =   0
+      PageBorder      =   0
+      Header          =   ""
+      Footer          =   ""
+      TableSep        =   "|;"
+      TableBorder     =   7
+      TablePen        =   0
+      TablePenLR      =   0
+      TablePenTB      =   0
+      NavBar          =   3
+      NavBarColor     =   -2147483633
+      ExportFormat    =   0
+      URL             =   ""
+      Navigation      =   3
+      NavBarMenuText  =   "Whole &Page|Page &Width|&Two Pages|Thumb&nail"
+   End
+End
+Attribute VB_Name = "FrmPrintIngEgreso"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Explicit
+Dim SeEjecuto As Boolean
+Private Sub CabeceraIngresos()
+    Dim vFecha1 As String, vFecha2 As String, vProveedor As String
+    Vp.FontSize = 10
+    Vp.TextAlign = taLeftMiddle
+    Vp.FontBold = True
+    Vp.TextBox "Empresa: " & xNomEmp, 800, 600, 5000, 400
+    Vp.TextBox "R.U.C.:  " & xNumRuc, 800, 800, 2000, 400
+    Vp.TextBox "Fecha: " & Date & "", 12000, 800, 2000, 400
+    
+    Vp.TextAlign = taCenterMiddle
+    Vp.FontSize = 11
+    Vp.TextBox "REPORTE DE INGRESOS", 5000, 1000, 5000, 400
+    
+    vFecha1 = Trim(FrmConsIngAlmacen.TxtFec1.Valor): vFecha2 = Trim(FrmConsIngAlmacen.TxtFec2.Valor)
+    Vp.TextBox "DESDE: " & vFecha1 & " HASTA: " & vFecha2 & "", 5000, 1200, 5000, 400
+    
+    Vp.TextAlign = taLeftMiddle
+'    If FrmConsIngAlmacen.ChkProveedor.Value = 1 Then
+    If Trim(FrmConsIngAlmacen.LblProveedor.Caption) <> "" Then
+        Vp.TextBox "Proveedor: " & FrmConsIngAlmacen.LblProveedor.Caption, 800, 1500, 4000, 400
+    End If
+'    End If
+    'If FrmConsIngAlmacen.ChkProducto.Value = 1 Then
+    If Trim(FrmConsIngAlmacen.lblProducto.Caption) <> "" Then
+        Vp.TextBox "Producto: " & FrmConsIngAlmacen.lblProducto.Caption & "", 5900, 1500, 5000, 400
+    End If
+    'End If
+            
+    FormatoNormal
+    Vp.SpaceAfter = 130
+    
+    Vp.TextBox "Fec. Operac.", 800, 1900, 900, 300
+    Vp.TextBox "Tipo Doc.", 1800, 1900, 700, 300
+    Vp.TextBox "Nro. de Doc.", 2600, 1900, 1500, 300
+    Vp.TextBox "Fec. Emis.", 4200, 1900, 800, 300
+    Vp.TextBox "Proveedor", 5100, 1900, 2000, 300
+    Vp.TextBox "Responsable", 7200, 1900, 2000, 300
+    Vp.TextBox "Producto", 9300, 1900, 2000, 300
+    Vp.TextAlign = taCenterTop
+    Vp.TextBox "Cant.", 11400, 1900, 600, 300
+    Vp.TextAlign = taLeftMiddle
+    Vp.TextBox "Uni. Med.", 12100, 1900, 600, 300
+    
+    Vp.DrawLine 800, 1850, 13000, 1850 'PARA LINEA DE ENCABEZ PAGINA HORIZONTAL
+    Vp.DrawLine 800, 2200, 13000, 2200
+''''''''''''''''''''
+'.TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 1), 800, xFila, 900, 300     'FECHA OPERAC
+'.TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 2), 1800, xFila, 700, 300     'TIPO DOC
+'.TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 3), 2600, xFila, 1500, 300     'NRO DE DOC
+'.TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 4), 4200, xFila, 800, 300     'FECHA EMISION '
+'.TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 5), 5100, xFila, 2000, 300     'PROVEEDOR / CLIENTE '
+'.TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 6), 7200, xFila, 2000, 300    'RESPONSABLE '
+'.TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 7), 9300, xFila, 2000, 300    'PRODUCTO '
+'.TextAlign = taRightMiddle
+'.TextBox Format(FrmConsIngAlmacen.Fg1.TextMatrix(A, 8), "####0.0000"), 11400, xFila, 600, 300  'CANTIDAD '
+'.TextAlign = taLeftMiddle
+'.TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 9), 12100, xFila, 600, 300
+'
+'If xFila >= 10900 Then
+'    Vp.DrawLine 800, 11090, 13000, 11090
+End Sub
+Private Sub PrintIngresos()
+    With Vp
+        Vp.Top = 0: Vp.Left = 0
+        FormatoNormal
+        .TextColor = &H80000008 'RGB(200, 200, 200)
+        'MUESTRA BORDES DEL REPORTE
+        .PageBorder = pbNone
+        .StartDoc
+            CabeceraIngresos
+            Dim A As Long, xFila As Long
+            xFila = 2300
+            For A = 1 To FrmConsIngAlmacen.Fg1.Rows - 1
+                FormatoNormal
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 1), 800, xFila, 900, 300     'FECHA OPERAC
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 2), 1800, xFila, 700, 300     'TIPO DOC
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 3), 2600, xFila, 1500, 300     'NRO DE DOC
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 4), 4200, xFila, 800, 300     'FECHA EMISION '
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 5), 5100, xFila, 2000, 300     'PROVEEDOR / CLIENTE '
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 6), 7200, xFila, 2000, 300    'RESPONSABLE '
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 7), 9300, xFila, 2000, 300    'PRODUCTO '
+                .TextAlign = taRightMiddle
+                .TextBox Format(FrmConsIngAlmacen.Fg1.TextMatrix(A, 8), "####0.0000"), 11400, xFila, 600, 300  'CANTIDAD '
+                .TextAlign = taLeftMiddle
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 9), 12100, xFila, 600, 300    'UNI MED '
+                
+                If xFila >= 10900 Then
+                    Vp.DrawLine 800, 11090, 13000, 11090
+                    .NewPage
+                    '.TextAlign = taLeftTop
+                    CabeceraIngresos
+                    '.FontSize = 6
+                    xFila = 2300
+                Else
+                    xFila = xFila + 200
+                End If
+'                Else 'PAGINA VERTICAL, 'If xFila >= 15500 Then, 'Vp.DrawLine 800, 16090, 11200, 16090, '.NewPage, ''.TextAlign = taLeftTop, 'Cabecera, ''.FontSize = 6, 'xFila = 2300
+'                    Else, 'xFila = xFila + 200, 'End If, 'End If
+            Next
+
+                Vp.DrawLine 800, 11090, 13000, 11090
+        .EndDoc
+        .ScrollIntoView 0, 0, 0, 0
+    End With
+End Sub
+Private Sub cabeceraSalida()
+    Dim vFecha1 As String, vFecha2 As String, vProveedor As String
+    Vp.FontSize = 10
+    Vp.TextAlign = taLeftMiddle
+    Vp.FontBold = True
+    Vp.TextBox "Empresa: " & xNomEmp, 300, 600, 5000, 400
+    Vp.TextBox "R.U.C.:  " & xNumRuc, 300, 800, 2000, 400
+    Vp.TextBox "Fecha: " & Date & "", 12000, 800, 2000, 400
+    
+    Vp.TextAlign = taCenterMiddle
+    Vp.FontSize = 11
+    Vp.TextBox "REPORTE DE SALIDAS", 5000, 1000, 5000, 400
+    
+    vFecha1 = Trim(FrmConsIngAlmacen.TxtFec1.Valor): vFecha2 = Trim(FrmConsIngAlmacen.TxtFec2.Valor)
+    Vp.TextBox "DESDE: " & vFecha1 & " HASTA: " & vFecha2 & "", 5000, 1200, 5000, 400
+    
+    Vp.TextAlign = taLeftMiddle
+'    If FrmConsIngAlmacen.ChkSolic.Value = 1 Then
+    If Trim(FrmConsIngAlmacen.LblSolicitante.Caption) <> "" Then
+        Vp.TextBox "Solicitante: " & FrmConsIngAlmacen.LblSolicitante.Caption, 300, 1500, 5000, 400
+    End If
+'    End If
+    'If FrmConsIngAlmacen.ChkProducto.Value = 1 Then
+    If Trim(FrmConsIngAlmacen.lblProducto.Caption) <> "" Then
+        Vp.TextBox "Producto: " & FrmConsIngAlmacen.lblProducto.Caption & "", 5900, 1500, 5000, 400
+    End If
+    'End If
+
+    FormatoNormal
+    Vp.TextBox "Fec. Operac.", 300, 1900, 900, 300
+    Vp.TextBox "Tipo Doc.", 1300, 1900, 700, 300
+    Vp.TextBox "Nro. de Doc.", 2050, 1900, 1500, 300
+    Vp.TextBox "Fec. Emis.", 3650, 1900, 800, 300
+    Vp.TextBox "Cliente", 4550, 1900, 2000, 300
+    Vp.TextBox "Responsable", 6650, 1900, 2000, 300
+    Vp.TextBox "Producto", 8750, 1900, 2000, 300
+    Vp.TextAlign = taCenterTop
+    Vp.TextBox "Cant.", 10850, 1900, 600, 300
+    Vp.TextAlign = taLeftMiddle
+    Vp.TextBox "Uni. Med.", 11550, 1900, 600, 300
+    Vp.TextBox "Solicitante", 12250, 1900, 2000, 300
+    Vp.TextBox "Area", 14450, 1900, 2000, 300
+
+    Vp.DrawLine 300, 1850, 16500, 1850 'PARA LINEA DE ENCABEZ PAGINA HORIZONTAL
+    Vp.DrawLine 300, 2200, 16500, 2200
+'.TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 3), 2050, xFila, 1500, 300     'NRO DE DOC '
+'.TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 4), 3650, xFila, 800, 300     'FECHA EMISION
+'.TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 5), 4550, xFila, 2000, 300     'PROVEEDOR / CLIENTE
+'.TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 6), 6650, xFila, 2000, 300    'RESPONSABLE '
+'.TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 7), 8750, xFila, 2000, 300    'PRODUCTO '
+'.TextAlign = taRightMiddle
+'.TextBox Format(FrmConsIngAlmacen.Fg1.TextMatrix(A, 8), "#####0.0000"), 10850, xFila, 600, 300    'CANTIDAD
+'.TextAlign = taLeftMiddle
+'.TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 9), 11550, xFila, 600, 300    'UNI MED '
+'.TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 10), 12250, xFila, 2100, 300 'SOLICITANTE '
+'.TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 11), 14450, xFila, 2000, 300 'AREA
+End Sub
+Private Sub PrintSalida()
+    With Vp
+        Vp.Top = 0: Vp.Left = 0
+'        .FontName = "Courier New"
+'        .FontSize = 10
+        FormatoNormal
+        .TextColor = &H80000008 'RGB(200, 200, 200)
+        'MUESTRA BORDES DEL REPORTE
+        .PageBorder = pbNone
+        .StartDoc
+            cabeceraSalida
+            Dim A As Long, xFila As Long
+            xFila = 2300
+'            .FontSize = 11
+            For A = 1 To FrmConsIngAlmacen.Fg1.Rows - 1
+                FormatoNormal
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 1), 300, xFila, 900, 300     'FECHA OPERAC
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 2), 1300, xFila, 700, 300     'TIPO DOC
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 3), 2050, xFila, 1500, 300     'NRO DE DOC '
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 4), 3650, xFila, 800, 300     'FECHA EMISION
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 5), 4550, xFila, 2000, 300     'PROVEEDOR / CLIENTE
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 6), 6650, xFila, 2000, 300    'RESPONSABLE '
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 7), 8750, xFila, 2000, 300    'PRODUCTO '
+                .TextAlign = taRightMiddle
+                .TextBox Format(FrmConsIngAlmacen.Fg1.TextMatrix(A, 8), "#####0.0000"), 10850, xFila, 600, 300    'CANTIDAD
+                .TextAlign = taLeftMiddle
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 9), 11550, xFila, 600, 300    'UNI MED '
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 10), 12250, xFila, 2100, 300 'SOLICITANTE '
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 11), 14450, xFila, 2000, 300 'AREA
+                If xFila >= 10900 Then
+                    Vp.DrawLine 800, 11090, 16000, 11090
+                    .NewPage
+                    '.TextAlign = taLeftTop
+                    Cabecera
+                    '.FontSize = 6
+                    xFila = 2300
+                Else
+                    xFila = xFila + 200
+                End If
+'                Else 'PAGINA VERTICAL
+'                    If xFila >= 15500 Then
+'                        Vp.DrawLine 800, 16090, 11200, 16090
+'                        .NewPage
+'                        '.TextAlign = taLeftTop
+'                        Cabecera
+'                        '.FontSize = 6
+'                        xFila = 2300
+'                    Else
+'                        xFila = xFila + 200
+'                    End If
+'                End If
+            Next
+'            If FrmConsIngAlmacen.OptSal.Value = True Then
+            Vp.DrawLine 800, 11090, 16000, 11090
+'            Else
+'                Vp.DrawLine 800, 16090, 11200, 16090
+'            End If
+        .EndDoc
+        .ScrollIntoView 0, 0, 0, 0
+    End With
+End Sub
+Sub FormatoNormal()
+    Vp.TextAlign = taLeftMiddle
+    Vp.FontSize = 9
+    Vp.FontBold = False
+End Sub
+Sub Cabecera()
+    Dim vFecha1 As String, vFecha2 As String, vProveedor As String
+    'vProveedor = Trim(FrmPrintRptCompras.TxtProv.Text)
+    
+    Vp.FontSize = 13
+    'Vp.TextBox vNomEmp, 800, 200, 5000, 400 'NOMBRE EMP
+    
+    'Vp.TextBox vNumRuc, 800, 400, 3000, 400  'NUM RUC
+    
+    Vp.TextAlign = taCenterTop
+    Vp.FontBold = True
+    Vp.CurrentY = 600
+    If FrmConsIngAlmacen.OptIng.Value = True Then
+        Vp = "REPORTE DE INGRESOS"
+'        Vp.TextBox "REPORTE DE COMPRAS", 7000, 800, 5000, 400    ''Vp.CurrentX = 7000: Vp.CurrentY = 800:  Vp.Paragraph = "REGISTRO DE COMPRAS"
+'        If Trim(FrmPrintRptCompras.TxtProv.Text) <> "" Then
+'            Vp.TextBox "PROVEEDOR : " & vProveedor, 800, 1500, 5000, 400  'Vp.CurrentX = 6600: Vp.CurrentY = 1500: Vp.Paragraph = "PROVEEDOR : " & FrmPrintRptCompras.TxtProv.Text
+'        End If
+    ElseIf FrmConsIngAlmacen.OptSal.Value = True Then
+        Vp = "REPORTE DE SALIDAS"
+        'If FrmConsIngAlmacen.ChkSolic.Value = 1 Then
+        If Trim(FrmConsIngAlmacen.LblSolicitante.Caption) <> "" Then
+'            Vp.SpaceAfter = 130
+            Vp.TextBox "Solicitante: " & Trim(FrmConsIngAlmacen.TxtIdSolicitante.Text) & " - " & Trim(FrmConsIngAlmacen.LblSolicitante.Caption) & "", 800, 500, 3000, 400
+        End If
+        'End If
+'        Vp.TextBox "REPORTE DE VENTAS", 7000, 800, 5000, 400    ''Vp.CurrentX = 7000: Vp.CurrentY = 800:  Vp.Paragraph = "REGISTRO DE COMPRAS"
+'        If Trim(FrmPrintRptCompras.TxtProv.Text) <> "" Then
+'            Vp.TextBox "CLIENTE : " & vProveedor, 800, 1500, 5000, 400  'Vp.CurrentX = 6600: Vp.CurrentY = 1500: Vp.Paragraph = "PROVEEDOR : " & FrmPrintRptCompras.TxtProv.Text
+'        End If
+    End If
+    FormatoNormal
+    Vp.SpaceAfter = 130
+    
+    Vp.TextAlign = taCenterMiddle
+    Vp.FontSize = 13
+    Vp.CurrentY = 1000
+    vFecha1 = Trim(FrmConsIngAlmacen.TxtFec1.Valor): vFecha2 = Trim(FrmConsIngAlmacen.TxtFec2.Valor)
+    Vp = "DESDE: " & vFecha1 & " HASTA: " & vFecha2 & ""
+    'Vp.TextBox "DESDE: " & vFecha1 & " HASTA: " & vFecha2 & "", 7000, 1100, 5000, 400
+    'Vp.CurrentX = 6500: Vp.CurrentY = 1100: Vp.Paragraph = "DESDE: " & vFecha1 & " HASTA: " & vFecha2
+    
+    FormatoNormal
+    Vp.TextBox "Fec. Operac.", 300, 1900, 900, 300
+    Vp.TextBox "Tipo Doc.", 1300, 1900, 700, 300
+    Vp.TextBox "Nro. de Doc.", 2050, 1900, 1100, 300
+    Vp.TextBox "Fec. Emis.", 3200, 1900, 700, 300
+    If FrmConsIngAlmacen.OptIng.Value = True Then
+        Vp.TextBox "Proveedor", 4000, 1900, 2000, 300
+    Else
+        Vp.TextBox "Cliente", 4000, 1900, 2000, 300
+    End If
+    Vp.TextBox "Responsable", 6050, 1900, 2000, 300
+    Vp.TextBox "Producto", 8150, 1900, 2000, 300
+    Vp.TextBox "Cant.", 10200, 1900, 600, 300
+    Vp.TextBox "Uni. Med.", 11000, 1900, 600, 300
+    If FrmConsIngAlmacen.OptSal.Value = True Then
+        Vp.TextBox "Solicitante", 12000, 1900, 2000, 300
+        Vp.TextBox "Area", 14300, 1900, 2000, 300
+    End If
+    
+        'Vp.CurrentX = 16200:   Vp.CurrentY = 1900:  Vp.Paragraph = "Area"
+        Vp.DrawLine 800, 1800, 16000, 1800 'PARA LINEA DE ENCABEZ PAGINA HORIZONTAL
+        Vp.DrawLine 800, 2200, 16000, 2200
+'    Else 'PARA LINEA DE ENCABEZADO PAGINA VERTICAL
+'        Vp.DrawLine 800, 1800, 11200, 1800
+'        Vp.DrawLine 800, 2200, 11200, 2200
+'    End If
+''''''''''''''''''''''''''''
+'    .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 1), 800, xFila, 1000, 300     'FECHA OPERAC
+'    .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 2), 2100, xFila, 1000, 300     'TIPO DOC
+'    .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 3), 3300, xFila, 1800, 300     'NRO DE DOC
+'    .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 4), 4800, xFila, 1000, 300     'FECHA EMISION
+'    .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 5), 6000, xFila, 3000, 300     'PROVEEDOR / CLIENTE
+'    .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 6), 9500, xFila, 3000, 300    'RESPONSABLE
+'    .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 7), 13500, xFila, 2500, 300    'PRODUCTO
+'    If FrmConsIngAlmacen.OptSal.Value = True Then
+'        .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 8), 16400, xFila, 2500, 300 'SOLICITANTE
+'        .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 9), 19300, xFila, 2200, 300 'AREA
+'    End If
+End Sub
+Sub Cargar()
+    With Vp
+        Vp.Top = 0: Vp.Left = 0
+'        .FontName = "Courier New"
+'        .FontSize = 10
+        FormatoNormal
+        .TextColor = &H80000008 'RGB(200, 200, 200)
+        'MUESTRA BORDES DEL REPORTE
+        .PageBorder = pbNone
+        .StartDoc
+            Cabecera
+            Dim A As Long, xFila As Long
+            xFila = 2300
+'            .FontSize = 11
+            For A = 1 To FrmConsIngAlmacen.Fg1.Rows - 1
+                FormatoNormal
+'                .TextAlign = taLeftTop
+'                .CurrentX = 800:  .CurrentY = xFila: .Paragraph = FrmRegComVen.Fg1.TextMatrix(A, 1), '.CurrentX = 1400: .CurrentY = xFila: .Paragraph = FrmRegComVen.Fg1.TextMatrix(A, 2), '.CurrentX = 2200: .CurrentY = xFila: .Paragraph = FrmRegComVen.Fg1.TextMatrix(A, 3), '.CurrentX = 3000: .CurrentY = xFila: .Paragraph = FrmRegComVen.Fg1.TextMatrix(A, 4)
+'                .CurrentX = 3500: .CurrentY = xFila: .Paragraph = FrmRegComVen.Fg1.TextMatrix(A, 5), '.CurrentX = 4800: .CurrentY = xFila: .Paragraph = FrmRegComVen.Fg1.TextMatrix(A, 6), '.CurrentX = 5800: .CurrentY = xFila: .Paragraph = Mid(FrmRegComVen.Fg1.TextMatrix(A, 7), 1, 33)
+    
+                '.TextAlign = taLeftTop
+                '.FontSize = 11
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 1), 300, xFila, 900, 300     'FECHA OPERAC
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 2), 1300, xFila, 700, 300     'TIPO DOC
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 3), 2050, xFila, 1100, 300     'NRO DE DOC
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 4), 3200, xFila, 700, 300     'FECHA EMISION
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 5), 4000, xFila, 2000, 300     'PROVEEDOR / CLIENTE
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 6), 6050, xFila, 2000, 300    'RESPONSABLE
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 7), 8150, xFila, 2000, 300    'PRODUCTO
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 8), 10250, xFila, 600, 300    'CANTIDAD
+                .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 9), 11000, xFila, 600, 300    'UNI MED
+                If FrmConsIngAlmacen.OptSal.Value = True Then
+                    .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 10), 12000, xFila, 2100, 300 'SOLICITANTE
+                    .TextBox FrmConsIngAlmacen.Fg1.TextMatrix(A, 11), 14300, xFila, 2000, 300 'AREA
+                End If
+'                If FrmConsIngAlmacen.OptSal.Value = True Then
+                    If xFila >= 10900 Then
+                        Vp.DrawLine 800, 11090, 16000, 11090
+                        .NewPage
+                        '.TextAlign = taLeftTop
+                        Cabecera
+                        '.FontSize = 6
+                        xFila = 2300
+                    Else
+                        xFila = xFila + 200
+                    End If
+'                Else 'PAGINA VERTICAL
+'                    If xFila >= 15500 Then
+'                        Vp.DrawLine 800, 16090, 11200, 16090
+'                        .NewPage
+'                        '.TextAlign = taLeftTop
+'                        Cabecera
+'                        '.FontSize = 6
+'                        xFila = 2300
+'                    Else
+'                        xFila = xFila + 200
+'                    End If
+'                End If
+            Next
+'            If FrmConsIngAlmacen.OptSal.Value = True Then
+                Vp.DrawLine 800, 11090, 16000, 11090
+'            Else
+'                Vp.DrawLine 800, 16090, 11200, 16090
+'            End If
+        .EndDoc
+        .ScrollIntoView 0, 0, 0, 0
+    End With
+End Sub
+
+Private Sub Form_Activate()
+    If SeEjecuto = False Then
+        SeEjecuto = True
+'        vNomEmp = "RINCON"
+'        vNumRuc = "00000000000"
+'        Cargar
+        If FrmConsIngAlmacen.OptIng.Value = True Then
+            PrintIngresos
+        Else
+            PrintSalida
+        End If
+    End If
+End Sub
+
+Private Sub Form_Load()
+    Vp.PaperSize = pprA4
+    Vp.Orientation = orLandscape  'HORIZONTAL
+'    If FrmConsIngAlmacen.OptIng.Value = True Then
+'        Vp.Orientation = orPortrait 'VERTICAL
+'    Else
+'        Vp.Orientation = orLandscape  'HORIZONTAL
+'    End If
+    SeEjecuto = False
+End Sub
+
+Private Sub Form_Resize()
+    On Error Resume Next
+    Vp.Width = Me.Width
+    Vp.Height = Me.Height - 500
+End Sub

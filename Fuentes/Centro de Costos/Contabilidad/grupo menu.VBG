@@ -1,0 +1,4 @@
+VBGROUP 5.0
+Project=sgi2_contabilidad.vbp
+StartupProject=..\..\Principal\SevenVBP.vbp
+Project=..\..\funciones\eps_librerias\eps_librerias.vbp

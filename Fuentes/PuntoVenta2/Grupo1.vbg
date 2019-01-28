@@ -1,0 +1,4 @@
+VBGROUP 5.0
+Project=SGI2_PuntoVenta2.vbp
+StartupProject=..\..\SevenVBP.vbp
+Project=..\Ventas\sgi2_ventas.vbp

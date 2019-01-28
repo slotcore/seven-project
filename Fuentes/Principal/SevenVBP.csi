@@ -1,0 +1,5 @@
+[History]
+1=#P0#=mb	#P1#=ActivarMenus	#P2#=SevenVBP/Principal/ActivarMenus	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140227234948	#P7#=0	#P8#=1	.
+2=#P0#=mb	#P1#=Form_Load	#P2#=SevenVBP/FrmIngresoUsuario/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140227234840	#P7#=0	#P8#=1	.
+3=#P0#=mb	#P1#=produccion_03_01_Click	#P2#=SevenVBP/MDIPrincipal/produccion_03_01_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140227234234	#P7#=0	#P8#=6	.
+4=#P0#=mb	#P1#=almacen_01_01_Click	#P2#=SevenVBP/MDIPrincipal/almacen_01_01_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140227175854	#P7#=0	#P8#=0	.

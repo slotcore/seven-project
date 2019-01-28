@@ -1,0 +1,3 @@
+VBGROUP 5.0
+Project=SGI2_puntoventa.vbp
+StartupProject=..\..\Contabilidad.vbp

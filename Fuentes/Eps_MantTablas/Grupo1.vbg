@@ -1,0 +1,4 @@
+VBGROUP 5.0
+StartupProject=..\..\contabilidad\directo.vbp
+Project=..\eps_librerias\eps_librerias.vbp
+Project=Eps_MantTablas.vbp

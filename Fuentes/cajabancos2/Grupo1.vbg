@@ -1,0 +1,5 @@
+VBGROUP 5.0
+Project=sgi2_cajabancos2.vbp
+StartupProject=..\..\SevenVBP.vbp
+Project=..\Contabilidad\sgi2_contabilidad.vbp
+Project=..\..\..\librerias 25\Eps_MantTablas\Eps_MantTablas.vbp
